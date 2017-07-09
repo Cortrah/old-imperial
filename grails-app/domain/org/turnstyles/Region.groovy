@@ -4,41 +4,64 @@ class Region {
 
     String name;
     String code;
-    String description;
+    String description = "default description";
 
-    String  notes;
-    String  status;
+    String  notes = "notes";
+    String  status = "?";
     Integer resistance = 3;
 
-    double x;
-    double y;
-    double w;
-    double h;
-    double cX;
-    double cY;
-    String path;
+    double x = 0;
+    double y = 0;
+    double w = 100;
+    double h = 100;
+    double cX = 50;
+    double cY = 50;
+    String path = "m0,0 L100,0 L100,100 L0,100 z";
 
     boolean isSecret;
     boolean hasRoad;
     boolean bordersVolcano;
+    boolean isInimical;
 
-    Integer gp;
-    Integer ap;
-    Integer nfp;
-    Integer mana;
-    double  pwb;
-    double  tv;
+    Integer gp = 1;
+    Integer ap = 1;
+    Integer nfp = 1;
+    Integer mana = 1;
+    double  pwb = 1.0;
+    double  tv = 1.0;
 
     static belongsTo = [majorMap: MajorMap];
+
+    String toString() { "$name"}
 
     static constraints = {
         name blank: false
         code blank: false
-        description blank: false
+        description nullable: true
 
         notes blank: true
-        status blank: false
+        status inList: ['?','free', 'pacified', 'tributary', 'allied', 'friendly', 'homeland']
         resistance range: 1..10
+
+        x()
+        y()
+        w()
+        h()
+        cX()
+        cY()
+        path()
+
+        isSecret()
+        hasRoad()
+        bordersVolcano()
+        isInimical()
+
+        gp()
+        ap()
+        nfp()
+        mana()
+        pwb()
+        tv()
 
     }
 }

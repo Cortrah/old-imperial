@@ -4,12 +4,14 @@ class MajorMap {
 
     String name;
     String code;
-    String description;
-    Integer height;
-    Integer width;
+    String description = "";
+    Integer height = 1600;
+    Integer width = 2400;
     String bg;
 
     static hasMany = [regions: Region];
+
+    String toString() {"$name"}
 
     static constraints = {
         name blank: false
@@ -17,6 +19,6 @@ class MajorMap {
         description blank: false
         height blank: false
         width blank: false
-        bg blank: false
+        bg nullable: true
     }
 }

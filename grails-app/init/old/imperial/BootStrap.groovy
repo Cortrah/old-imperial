@@ -1,15 +1,96 @@
 package old.imperial
 
-import org.turnstyles.MajorMap;
+
+import org.turnstyles.BorderType
+import org.turnstyles.MajorMap
+import org.turnstyles.MovementType;
 import org.turnstyles.Region
 
 class BootStrap {
 
     def init = { servletContext ->
-        MajorMap mainMap = new MajorMap(name: "Sahul")
-            .addToRegions("name": "region1")
+        MajorMap mainMap = new MajorMap(name: "Sahul",
+                code: "Sah",
+                description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
+                height: 1400, width: 2600, bg: "sahul.svg")
+            .addToRegions("name": "Kommolek", "code": "Kom",
+                "description": "Capital of the yagnarist realm of Kommolek")
             .save();
+
+        MovementType movementType = new MovementType(
+                name: "Unknown", code: "?", description: "a mystery").save();
+        MovementType movementType1 = new MovementType(
+                name: "Land", code: "L", description: "land movement").save();
+        MovementType movementType2 = new MovementType(
+                name: "Naval", code: "N", description: "by ocean, river or canal").save();
+        MovementType movementType3 = new MovementType(
+                name: "Air", code: "A", description: "flying").save();
+        MovementType movementType4 = new MovementType(
+                name: "Celestial", code: "C", description: "flying high").save();
+        MovementType movementType5 = new MovementType(
+                name: "Subteranian", code: "S", description: "underground").save();
+        MovementType movementType6 = new MovementType(
+                name: "Gate", code: "G", description: "using a magical gate").save();
+        MovementType movementType7 = new MovementType(
+                name: "Teleportation", code: "T", description: "via the teleportation spell").save();
+
+
+        BorderType borderType = new BorderType(
+                name: "Unknown", code: "?", description: "a mystery",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType1 = new BorderType(
+                name: "adjacent", code: "adj", description: "a default border, easy to cross at no penalty",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType2 = new BorderType(
+                name: "road", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType3 = new BorderType(
+                name: "river", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType4 = new BorderType(
+                name: "canal", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType5 = new BorderType(
+                name: "bridge", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType6 = new BorderType(
+                name: "minor mountain", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType7 = new BorderType(
+                name: "major mountain", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType8 = new BorderType(
+                name: "minor mountain pass", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType9 = new BorderType(
+                name: "major mountain pass", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType10 = new BorderType(
+                name: "great wall", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType11 = new BorderType(
+                name: "tunnel", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType12 = new BorderType(
+                name: "blocked tunnel", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType13 = new BorderType(
+                name: "gate", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType14 = new BorderType(
+                name: "stairs", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType15 = new BorderType(
+                name: "cliffs", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType16 = new BorderType(
+                name: "current", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType borderType17 = new BorderType(
+                name: "monsoon current", code: "", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
     }
+
     def destroy = {
     }
 }
