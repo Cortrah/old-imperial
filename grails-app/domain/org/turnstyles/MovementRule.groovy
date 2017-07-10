@@ -16,6 +16,7 @@ class MovementRule {
 
         name blank: false
         code blank: false
+
         description nullable: true
         preconditions nullable: true
 

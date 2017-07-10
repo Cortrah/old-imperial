@@ -3,22 +3,24 @@ package org.turnstyles
 class MovementEffect {
 
     String name
-    String code = 'mv'
+    String code = 'mv_e'
     String description = "movement effect"
 
     MovementType movementType
 
-    String targetType
-    String operator
-    Integer amount
+    String targetType = "cost"
+    String operator = "+"
+    Integer amount = 0;
 
-    String toString() {"$name $targetType $operator $amount"}
+    String toString() {"$name"}
 
     static constraints = {
 
         name blank: false
         code blank: false
         description nullable: true
+
+        movementType nullable: true
 
         targetType inList: ['row', 'cost', 'benefit']
         operator inList: ['+', '-', '*']

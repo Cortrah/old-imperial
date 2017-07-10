@@ -36,16 +36,8 @@ class BootStrap {
                 name: "Gate", code: "G", description: "using a magical gate").save();
         MovementType teleportMv = new MovementType(
                 name: "Teleportation", code: "T", description: "via the teleportation spell").save();
-
-        MovementEffect adjCost = new MovementEffect(
-                name: "Adjacent Border Cost", code: "adj_bd",
-                description: "The cost for moving across an adjacent border",
-                targetType: "cost", operator: "+", ammount:0).save()
-
-        MovementRule movementRule = new MovementRule(
-            name: "Adj Cost", code: "Adj_cst", description: "The cost of going into an adjacent land region",
-            preconditions: "always", movementType: landMv, movementEffect: adjCost).save()
-
+        MovementType allMv = new MovementType(
+                name: "All", code: "*", description: "all movement types").save();
 
         BorderType borderType = new BorderType(
                 name: "Unknown", code: "?", description: "a mystery",
@@ -101,6 +93,16 @@ class BootStrap {
         BorderType borderType17 = new BorderType(
                 name: "Monsoon Current", code: "MC", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+
+        MovementEffect adjCost = new MovementEffect(
+                name: "Adjacent Border Cost", code: "adj_bd",
+                description: "The cost for moving across an adjacent border",
+                targetType: "cost", operator: "+", ammount:0).save()
+
+        MovementRule movementRule = new MovementRule(
+                name: "Adj Border Cost", code: "Adj_cst", description: "The cost of going into an adjacent region",
+                preconditions: "always", movementType: allMv, movementEffect: adjCost).save()
+
     }
 
     def destroy = {

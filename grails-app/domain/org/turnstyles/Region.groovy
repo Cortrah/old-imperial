@@ -43,19 +43,6 @@ class Region {
         status inList: ['?','free', 'pacified', 'tributary', 'allied', 'friendly', 'homeland']
         resistance range: 1..10
 
-        x()
-        y()
-        w()
-        h()
-        cX()
-        cY()
-        path()
-
-        isSecret()
-        hasRoad()
-        bordersVolcano()
-        isInimical()
-
         gp()
         ap()
         nfp()
@@ -63,5 +50,17 @@ class Region {
         pwb()
         tv()
 
+        isSecret()
+        hasRoad()
+        bordersVolcano()
+        isInimical()
+
+        x()
+        y()
+        w()
+        h()
+        cX()
+        cY()
+        path()
     }
 }
