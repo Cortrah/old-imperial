@@ -12,6 +12,8 @@ class BorderType {
 
     boolean isDirectional
 
+    String toString() {"$name"}
+
     static constraints = {
 
         name blank: false

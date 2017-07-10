@@ -3,6 +3,8 @@ package old.imperial
 
 import org.turnstyles.BorderType
 import org.turnstyles.MajorMap
+import org.turnstyles.MovementEffect
+import org.turnstyles.MovementRule
 import org.turnstyles.MovementType;
 import org.turnstyles.Region
 
@@ -17,22 +19,32 @@ class BootStrap {
                 "description": "Capital of the yagnarist realm of Kommolek")
             .save();
 
-        MovementType movementType = new MovementType(
+
+        MovementType unknownMv = new MovementType(
                 name: "Unknown", code: "?", description: "a mystery").save();
-        MovementType movementType1 = new MovementType(
+        MovementType landMv = new MovementType(
                 name: "Land", code: "L", description: "land movement").save();
-        MovementType movementType2 = new MovementType(
+        MovementType navalMv = new MovementType(
                 name: "Naval", code: "N", description: "by ocean, river or canal").save();
-        MovementType movementType3 = new MovementType(
+        MovementType airMv = new MovementType(
                 name: "Air", code: "A", description: "flying").save();
-        MovementType movementType4 = new MovementType(
+        MovementType celestialMv = new MovementType(
                 name: "Celestial", code: "C", description: "flying high").save();
-        MovementType movementType5 = new MovementType(
+        MovementType subterainianMv = new MovementType(
                 name: "Subteranian", code: "S", description: "underground").save();
-        MovementType movementType6 = new MovementType(
+        MovementType gateMv = new MovementType(
                 name: "Gate", code: "G", description: "using a magical gate").save();
-        MovementType movementType7 = new MovementType(
+        MovementType teleportMv = new MovementType(
                 name: "Teleportation", code: "T", description: "via the teleportation spell").save();
+
+        MovementEffect adjCost = new MovementEffect(
+                name: "Adjacent Border Cost", code: "adj_bd",
+                description: "The cost for moving across an adjacent border",
+                targetType: "cost", operator: "+", ammount:0).save()
+
+        MovementRule movementRule = new MovementRule(
+            name: "Adj Cost", code: "Adj_cst", description: "The cost of going into an adjacent land region",
+            preconditions: "always", movementType: landMv, movementEffect: adjCost).save()
 
 
         BorderType borderType = new BorderType(

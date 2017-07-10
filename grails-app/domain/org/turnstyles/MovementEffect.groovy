@@ -12,6 +12,8 @@ class MovementEffect {
     String operator
     Integer amount
 
+    String toString() {"$name $targetType $operator $amount"}
+
     static constraints = {
 
         name blank: false

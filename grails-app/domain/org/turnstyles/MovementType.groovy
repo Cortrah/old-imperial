@@ -6,6 +6,8 @@ class MovementType {
     String code = 'mv'
     String description = "movement type"
 
+    String toString() {"$name"}
+
     static constraints = {
 
         name blank: false

@@ -6,16 +6,21 @@ class MovementRule {
     String code = 'mv'
     String description = "movement rule"
 
-    String preConditions
+    String preconditions
     MovementType movementType
     MovementEffect movementEffect
+
+    String toString() {"$name $movementType $movementEffect"}
 
     static constraints = {
 
         name blank: false
         code blank: false
         description nullable: true
-        preConditions nullable: true
+        preconditions nullable: true
+
+        movementType nullable: true
+        movementEffect nullable: true
 
     }
 }
