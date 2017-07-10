@@ -2,5 +2,5 @@ package org.turnstyles
 
 class MovementRuleController {
 
-    def index() { }
+    static scaffold = MovementRule
 }

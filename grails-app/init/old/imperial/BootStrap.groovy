@@ -39,55 +39,55 @@ class BootStrap {
                 name: "Unknown", code: "?", description: "a mystery",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType1 = new BorderType(
-                name: "adjacent", code: "adj", description: "a default border, easy to cross at no penalty",
+                name: "Adjacent", code: "Adj", description: "a default border, easy to cross at no penalty",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType2 = new BorderType(
-                name: "road", code: "", description: "",
+                name: "Road", code: "Rd", description: "A Road",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType3 = new BorderType(
-                name: "river", code: "", description: "",
+                name: "River", code: "Ri", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType4 = new BorderType(
-                name: "canal", code: "", description: "",
+                name: "Canal", code: "Can", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType5 = new BorderType(
-                name: "bridge", code: "", description: "",
+                name: "Bridge", code: "Br", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType6 = new BorderType(
-                name: "minor mountain", code: "", description: "",
+                name: "Minor Mountain", code: "MiMtn", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType7 = new BorderType(
-                name: "major mountain", code: "", description: "",
+                name: "Major Mountain", code: "MaMtn", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType8 = new BorderType(
-                name: "minor mountain pass", code: "", description: "",
+                name: "Minor Mountain Pass", code: "MiMP", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType9 = new BorderType(
-                name: "major mountain pass", code: "", description: "",
+                name: "Major Mountain Pass", code: "MaMP", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType10 = new BorderType(
-                name: "great wall", code: "", description: "",
+                name: "Great Wall", code: "GW", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType11 = new BorderType(
-                name: "tunnel", code: "", description: "",
+                name: "Tunnel", code: "T", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType12 = new BorderType(
-                name: "blocked tunnel", code: "", description: "",
+                name: "Blocked Tunnel", code: "BT", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType13 = new BorderType(
-                name: "gate", code: "", description: "",
+                name: "Gate", code: "Gt", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType14 = new BorderType(
-                name: "stairs", code: "", description: "",
+                name: "Stairs", code: "St", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType15 = new BorderType(
-                name: "cliffs", code: "", description: "",
+                name: "Cliffs", code: "Cl", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType16 = new BorderType(
-                name: "current", code: "", description: "",
+                name: "Current", code: "Cu", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
         BorderType borderType17 = new BorderType(
-                name: "monsoon current", code: "", description: "",
+                name: "Monsoon Current", code: "MC", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
     }
 
