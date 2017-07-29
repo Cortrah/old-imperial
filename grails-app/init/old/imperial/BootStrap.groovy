@@ -39,69 +39,72 @@ class BootStrap {
         MovementType allMv = new MovementType(
                 name: "All", code: "*", description: "all movement types").save();
 
-        BorderType borderType = new BorderType(
+        BorderType unknownBorder = new BorderType(
                 name: "Unknown", code: "?", description: "a mystery",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType1 = new BorderType(
+        BorderType adjBorder = new BorderType(
                 name: "Adjacent", code: "Adj", description: "a default border, easy to cross at no penalty",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType2 = new BorderType(
+        BorderType roadBorder = new BorderType(
                 name: "Road", code: "Rd", description: "A Road",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType3 = new BorderType(
+        BorderType riverBorder = new BorderType(
                 name: "River", code: "Ri", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType4 = new BorderType(
+        BorderType canalBorder = new BorderType(
                 name: "Canal", code: "Can", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType5 = new BorderType(
+        BorderType bridgeBorder = new BorderType(
                 name: "Bridge", code: "Br", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType6 = new BorderType(
+        BorderType minMtnBorder = new BorderType(
                 name: "Minor Mountain", code: "MiMtn", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType7 = new BorderType(
+        BorderType majMtnBorder = new BorderType(
                 name: "Major Mountain", code: "MaMtn", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType8 = new BorderType(
+        BorderType minMtnPassBorder = new BorderType(
                 name: "Minor Mountain Pass", code: "MiMP", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType9 = new BorderType(
+        BorderType majMtnPassBorder = new BorderType(
                 name: "Major Mountain Pass", code: "MaMP", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType10 = new BorderType(
+        BorderType greatWallBorder = new BorderType(
                 name: "Great Wall", code: "GW", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType11 = new BorderType(
+        BorderType tunnelBorder = new BorderType(
                 name: "Tunnel", code: "T", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType12 = new BorderType(
+        BorderType blockedTunnelBorder = new BorderType(
                 name: "Blocked Tunnel", code: "BT", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType13 = new BorderType(
+        BorderType gateBorder = new BorderType(
                 name: "Gate", code: "Gt", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType14 = new BorderType(
+        BorderType teleportationBorder = new BorderType(
+                name: "Teleportation", code: "T", description: "",
+                landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
+        BorderType stairsBorder = new BorderType(
                 name: "Stairs", code: "St", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType15 = new BorderType(
+        BorderType cliffsBorder = new BorderType(
                 name: "Cliffs", code: "Cl", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType16 = new BorderType(
+        BorderType currentBorder = new BorderType(
                 name: "Current", code: "Cu", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
-        BorderType borderType17 = new BorderType(
+        BorderType monsoonCurrentBorder = new BorderType(
                 name: "Monsoon Current", code: "MC", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save();
 
-        MovementEffect adjCost = new MovementEffect(
-                name: "Adjacent Border Cost", code: "adj_bd",
-                description: "The cost for moving across an adjacent border",
+        MovementEffect adjLCost = new MovementEffect(
+                name: "Adjacent Land Border Cost", code: "albc",
+                description: "The cost for moving across an adjacent land border",
                 targetType: "cost", operator: "+", ammount:0).save()
 
         MovementRule movementRule = new MovementRule(
-                name: "Adj Border Cost", code: "Adj_cst", description: "The cost of going into an adjacent region",
-                preconditions: "always", movementType: allMv, movementEffect: adjCost).save()
+                name: "Adj L Border Cost", code: "Adj_l_cst", description: "The cost of going into an adjacent land region",
+                preconditions: "always", movementType: landMv, movementEffect: adjLCost).save()
 
     }
 
