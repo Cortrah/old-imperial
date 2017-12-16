@@ -43,11 +43,12 @@ Turn Processing Tool
     1. Grails & Postgres with a dynamic scaffold
         configure Grails Plugin
         Do a couple of tables a day
+        login via grails
     
-    2. A custom interface with React with Blueprint
-        configure a simple interface with blueprint
-        Cors
-        login via grails or react?
+    2. A custom admin interface with React and Blueprint
+       A player map and interface with vue and element
+       Cors
+       login via clients
         
 
     
@@ -66,16 +67,15 @@ Vue client interface
 
 # Technical Process
 
-    Get Grails and React working.    
+    Get Grails and Graphql working.    
 
-    Install Blueprint   
-
-    Try React Storybook
+    Try Vue Storybook 
     
-     Add inline popup
+    Add inline popup
     
     Add map
     
+    Esperiment with Grails Plugin
 
 # Design Process
 
