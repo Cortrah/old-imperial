@@ -45,11 +45,11 @@ Turn Processing Tool
         Do a couple of tables a day
         login via grails
     
-    2. A custom admin interface with React and Blueprint
-       A player map and interface with vue and element
+    2. A player map and interface with vue and element
        Cors
        login via clients
-        
+       
+    3. Possibly a custom admin interface with React and Blueprint    
 
     
 Vue client interface
@@ -67,15 +67,27 @@ Vue client interface
 
 # Technical Process
 
+    Esperiment with Grails Plugin
+    
     Get Grails and Graphql working.    
+    
+    Create a vue project (seperate or monolithic?)
 
-    Try Vue Storybook 
+    Try Vue Storybook and element ui
     
     Add inline popup
     
     Add map
+   
+    Add a leader icon to the map
     
-    Esperiment with Grails Plugin
+    Have the leader icon be draggable
+    
+    Have the leader icon have orbit actions
+    
+    Assemble those actions and post them to the server
+    
+    Have the server interface process the actions
 
 # Design Process
 
