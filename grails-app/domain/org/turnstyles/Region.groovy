@@ -34,6 +34,8 @@ class Region {
 
     String toString() { "$name"}
 
+    static graphql = true
+
     static constraints = {
         name blank: false
         code blank: false
