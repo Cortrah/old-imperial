@@ -1,9 +1,14 @@
 package org.turnstyles
 
+// ToDo: add Realm, kindred, many locations, and terrain
+// ToDo: at some point add 'areas' as groups of regions
+// Don't bother with secondTributor, Provinces, or minormap and it's quadrant yet
+
 class Region {
 
     String name;
     String code;
+    String label;
     String description = "default description";
 
     String  notes = "notes";
@@ -31,13 +36,19 @@ class Region {
     double  tv = 1.0;
 
     static belongsTo = [majorMap: MajorMap];
+    static hasMany = [locations: Location];
+    TerrainType terrainType;
 
     String toString() { "$name"}
+
+    static graphql = true
 
     static constraints = {
         name blank: false
         code blank: false
+        label blank: false
         description nullable: true
+        terrainType nullable: true // ToDo: init to clear terrain
 
         notes blank: true
         status inList: ['?','free', 'pacified', 'tributary', 'allied', 'friendly', 'homeland']

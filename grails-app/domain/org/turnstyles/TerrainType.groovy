@@ -1,6 +1,6 @@
 package org.turnstyles
 
-class BorderType {
+class TerrainType {
     String name
     String code
     String description = "default description"
@@ -8,9 +8,6 @@ class BorderType {
     Integer landCost = null
     Integer airCost = null
     Integer navalCost = null
-    Integer manaCost = null
-
-    boolean isDirectional
 
     String toString() {"$name"}
 
@@ -25,8 +22,5 @@ class BorderType {
         landCost()
         airCost()
         navalCost()
-        manaCost()
-
-        isDirectional()
     }
 }

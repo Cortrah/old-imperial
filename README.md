@@ -1,3 +1,22 @@
+# CONFIGULAR
+    curl -s get.sdkman.io | bash
+    should be at
+    /Users/cort/.sdkman
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+    sdk install grails
+    grails -version
+    
+    which grails
+    /Users/cort/.sdkman/candidates/grails/current/bin/grails
+    which groovy
+    /usr/local/bin/groovy
+
+    set GRAILS_HOME and PATH in .profile
+
+    export GRAILS_HOME=/path/to/grails
+    export PATH="$PATH:$GRAILS_HOME/bin" 
+
+
 # Old Imperial
 
 Overall Todo

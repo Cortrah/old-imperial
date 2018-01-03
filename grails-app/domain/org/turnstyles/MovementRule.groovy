@@ -12,6 +12,8 @@ class MovementRule {
 
     String toString() {"$name $movementType $movementEffect"}
 
+    static graphql = true
+
     static constraints = {
 
         name blank: false
