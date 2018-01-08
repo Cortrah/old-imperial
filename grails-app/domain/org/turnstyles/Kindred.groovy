@@ -8,7 +8,7 @@ class Kindred {
     String notes = "Notes"
     String toString() {"$name"}
 
-    boolean isSecret = false;
+    boolean isSecret = false
 
     static graphql = true
     static constraints = {

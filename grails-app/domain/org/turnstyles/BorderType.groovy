@@ -15,7 +15,6 @@ class BorderType {
 
     static graphql = true
     static constraints = {
-
         name blank: false
         code blank: false
         description nullable: true

@@ -9,8 +9,8 @@ class Realm {
 
     Herald herald
 
-    static belongsTo = [game: Game];
-    static hasMany = [realmTurns: RealmTurn];
+    static belongsTo = [game: Game]
+    static hasMany = [realmTurns: RealmTurn]
 
     static graphql = true
     static constraints = {

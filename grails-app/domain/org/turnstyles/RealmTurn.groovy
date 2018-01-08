@@ -16,8 +16,8 @@ class RealmTurn {
     Double EndingTv = 0.0
 
     Realm realm;
-    static belongsTo = [turn: Turn];
-    static hasMany = [regionTurnStatuses: RegionTurnStatus];
+    static belongsTo = [turn: Turn]
+    static hasMany = [regionTurnStatuses: RegionTurnStatus]
 
     static graphql = true
     static constraints = {

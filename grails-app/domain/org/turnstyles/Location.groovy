@@ -2,14 +2,14 @@ package org.turnstyles
 
 class Location {
 
-    String name = "RegionName:Country";
-    String code = "RegionCode:cty";
-    String label = "country";
+    String name = "RegionName:Country"
+    String code = "RegionCode:cty"
+    String label = "country"
     String toString() {"$code"}
 
     boolean isSecret = false;
 
-    static belongsTo = [region: Region];
+    static belongsTo = [region: Region]
 
     static graphql = true
     static constraints = {

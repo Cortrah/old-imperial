@@ -10,7 +10,7 @@ class MovementEffect {
 
     String targetType = "cost"
     String operator = "+"
-    Integer amount = 0;
+    Integer amount = 0
 
     static graphql = true
     static constraints = {

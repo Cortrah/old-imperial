@@ -8,11 +8,10 @@ class Herald {
     String img = "default.png"
     String toString() {"$name"}
 
-    static belongsTo = [realm: Realm];
+    static belongsTo = [realm: Realm]
 
     static graphql = true
     static constraints = {
-
         name blank: false
         code blank: false
         label blank: false

@@ -7,8 +7,8 @@ class Game {
     String notes = "Notes"
     String toString() {"$name"}
 
-    static hasMany = [turns: Turn];
-    Turn currentTurn;
+    static hasMany = [turns: Turn]
+    Turn currentTurn
 
     static graphql = true
     static constraints = {
@@ -16,6 +16,5 @@ class Game {
         code blank: false
         label blank: false
         notes blank: true
-
     }
 }
