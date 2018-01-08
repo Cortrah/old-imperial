@@ -6,11 +6,11 @@ class Herald {
     String label = "Herald"
     String description = "default description"
     String img = "default.png"
-
     String toString() {"$name"}
 
-    static graphql = true
+    static belongsTo = [realm: Realm];
 
+    static graphql = true
     static constraints = {
 
         name blank: false

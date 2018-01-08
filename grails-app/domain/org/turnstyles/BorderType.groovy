@@ -4,6 +4,7 @@ class BorderType {
     String name
     String code
     String description = "default description"
+    String toString() {"$name"}
 
     Integer landCost = null
     Integer airCost = null
@@ -12,10 +13,7 @@ class BorderType {
 
     boolean isDirectional
 
-    String toString() {"$name"}
-
     static graphql = true
-
     static constraints = {
 
         name blank: false

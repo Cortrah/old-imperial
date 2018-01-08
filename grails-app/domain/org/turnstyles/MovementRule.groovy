@@ -5,17 +5,14 @@ class MovementRule {
     String name
     String code = 'mv'
     String description = "movement rule"
+    String toString() {"$name $movementType $movementEffect"}
 
     String preconditions
     MovementType movementType
     MovementEffect movementEffect
 
-    String toString() {"$name $movementType $movementEffect"}
-
     static graphql = true
-
     static constraints = {
-
         name blank: false
         code blank: false
 

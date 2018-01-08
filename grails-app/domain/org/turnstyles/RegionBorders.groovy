@@ -1,19 +1,17 @@
 package org.turnstyles
 
-// ToDo: calculate isHostile
-
 class RegionBorders {
 
     String name;
     Region source;
     BorderType borderType;
     Region sink;
-    boolean isSecret = false;
-
     String toString() {"$name"}
 
-    static graphql = true
+    boolean isSecret = false;
+    // ToDo: calculate isHostile
 
+    static graphql = true
     static constraints = {
         name blank: false
         source nullable: false

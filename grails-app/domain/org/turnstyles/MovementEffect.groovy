@@ -5,6 +5,7 @@ class MovementEffect {
     String name
     String code = 'mv_e'
     String description = "movement effect"
+    String toString() {"$name"}
 
     MovementType movementType
 
@@ -12,10 +13,7 @@ class MovementEffect {
     String operator = "+"
     Integer amount = 0;
 
-    String toString() {"$name"}
-
     static graphql = true
-
     static constraints = {
 
         name blank: false

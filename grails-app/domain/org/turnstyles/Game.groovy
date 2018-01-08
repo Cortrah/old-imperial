@@ -5,13 +5,13 @@ class Game {
     String code = "G"
     String label = "Game"
     String notes = "Notes"
-
     String toString() {"$name"}
 
+    static hasMany = [turns: Turn];
+    Turn currentTurn;
+
     static graphql = true
-
     static constraints = {
-
         name blank: false
         code blank: false
         label blank: false
