@@ -11,9 +11,9 @@ class RealmTurn {
     // FinalResults
 
     Double startingIsi = 0.0
-    Double StartingTv = 0.0
-    Double EndingIsi = 0.0
-    Double EndingTv = 0.0
+    Double startingTv = 0.0
+    Double endingIsi = 0.0
+    Double endingTv = 0.0
 
     Realm realm;
     static belongsTo = [turn: Turn]
@@ -26,8 +26,8 @@ class RealmTurn {
         notes blank: true
 
         startingIsi()
-        StartingTv()
-        EndingIsi()
-        EndingTv()
+        startingTv()
+        endingIsi()
+        endingTv()
     }
 }

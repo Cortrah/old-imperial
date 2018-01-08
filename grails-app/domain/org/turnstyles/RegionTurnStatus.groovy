@@ -12,14 +12,14 @@ class RegionTurnStatus {
     Realm realm
     Region region
     AllegianceType allegiance
-    TerrainType terrainType
+//    TerrainType terrainType
 
-    Integer Gp = 0
-    Integer Ap = 0
-    Integer Nfp = 0
-    Integer Mana = 0
-    Integer Pwb = 0
-    Integer Tv = 0
+//    Integer Gp = 0
+//    Integer Ap = 0
+//    Integer Nfp = 0
+//    Integer Mana = 0
+//    Integer Pwb = 0
+//    Integer Tv = 0
 
     Boolean hasRoad = false
     Boolean isSecret = false
@@ -37,9 +37,14 @@ class RegionTurnStatus {
         realm nullable: true
         region nullable: false
 
+        allegiance nullable: true
+        //terrainType nullable: true
+
+        hasRoad nullable: false
+        isSecret nullable: false
+        isInimical nullable: false
+
         status inList: ['?','free', 'pacified', 'tributary', 'allied', 'friendly', 'homeland']
         resistance range: 1..10
-
-        terrainType nullable: true // ToDo: init to clear terrain
     }
 }
