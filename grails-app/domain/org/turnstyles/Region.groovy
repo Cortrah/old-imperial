@@ -12,7 +12,7 @@ class Region {
     String toString() {"$name"}
 
     Kindred kindred
-//    TerrainType terrain
+    TerrainType terrain
 
     boolean isSecret = false
     boolean bordersVolcano = false
@@ -37,7 +37,7 @@ class Region {
         notes blank: true
 
         kindred nullable : true
-//        terrainType nullable: true
+        terrain nullable: true
         isSecret nullable: false
         bordersVolcano()
 

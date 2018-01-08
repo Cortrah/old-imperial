@@ -12,7 +12,7 @@ class RegionTurnStatus {
     Realm realm
     Region region
     AllegianceType allegiance
-//    TerrainType terrainType
+    TerrainType terrain
 
 //    Integer Gp = 0
 //    Integer Ap = 0
@@ -38,7 +38,7 @@ class RegionTurnStatus {
         region nullable: false
 
         allegiance nullable: true
-        //terrainType nullable: true
+        terrain nullable: true
 
         hasRoad nullable: false
         isSecret nullable: false
