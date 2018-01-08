@@ -11,7 +11,7 @@ class BorderType {
     Integer navalCost = null
     Integer manaCost = null
 
-    boolean isDirectional
+    boolean isDirectional = false
 
     static graphql = true
     static constraints = {
