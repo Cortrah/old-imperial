@@ -10,10 +10,10 @@ class RealmTurn {
     // AutoResults
     // FinalResults
 
-    Double startingIsi = 0.0;
-    Double StartingTv = 0.0;
-    Double EndingIsi = 0.0;
-    Double EndingTv = 0.0;
+    Double startingIsi = 0.0
+    Double StartingTv = 0.0
+    Double EndingIsi = 0.0
+    Double EndingTv = 0.0
 
     Realm realm;
     static belongsTo = [turn: Turn];
@@ -25,5 +25,9 @@ class RealmTurn {
         code blank: false
         notes blank: true
 
+        startingIsi()
+        StartingTv()
+        EndingIsi()
+        EndingTv()
     }
 }

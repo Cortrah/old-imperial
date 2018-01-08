@@ -21,6 +21,5 @@ class MovementRule {
 
         movementType nullable: true
         movementEffect nullable: true
-
     }
 }

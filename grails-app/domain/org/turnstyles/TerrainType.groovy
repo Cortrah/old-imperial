@@ -1,8 +1,8 @@
 package org.turnstyles
 
 class TerrainType {
-    String name
-    String code
+    String name = "Clear"
+    String code = "C"
     String description = "default description"
     String toString() {"$name"}
 

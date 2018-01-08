@@ -4,30 +4,29 @@ package org.turnstyles
 // Don't bother with secondTributor, Provinces, or minormap and it's quadrant yet
 
 class Region {
-
-    String name;
-    String code;
-    String label;
-    String description = "default description";
-    String notes = "notes";
+    String name = "RegionName"
+    String code = "RegionCode"
+    String label = "RegionLabel"
+    String description = "default description"
+    String notes = "notes"
     String toString() {"$name"}
 
-    Kindred kindred;
-    TerrainType terrain;
+    Kindred kindred
+    TerrainType terrain
 
-    boolean isSecret = false;
-    boolean bordersVolcano = false;
+    boolean isSecret = false
+    boolean bordersVolcano = false
 
-    double x = 0;
-    double y = 0;
-    double w = 100;
-    double h = 100;
-    double cX = 50;
-    double cY = 50;
-    String path = "m0,0 L100,0 L100,100 L0,100 z";
+    Integer x = 0
+    Integer y = 0
+    Integer w = 100
+    Integer h = 100
+    Integer cX = 50
+    Integer cY = 50
+    String path = "m0,0 L100,0 L100,100 L0,100 z"
 
-    static belongsTo = [majorMap: MajorMap];
-    static hasMany = [regionTurnStatuses: RegionTurnStatus];
+    static belongsTo = [majorMap: MajorMap]
+    static hasMany = [regionTurnStatuses: RegionTurnStatus]
 
     static graphql = true
     static constraints = {

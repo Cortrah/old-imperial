@@ -1,7 +1,6 @@
 package org.turnstyles
 
 class MovementEffect {
-
     String name
     String code = 'mv_e'
     String description = "movement effect"

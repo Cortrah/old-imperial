@@ -1,11 +1,10 @@
 package org.turnstyles
 
 class RegionBorders {
-
-    String name;
-    Region source;
-    BorderType borderType;
-    Region sink;
+    String name = "Source>BorderType>Sink"
+    Region source = 'Source'
+    BorderType borderType = "BorderType"
+    Region sink = "Sink"
     String toString() {"$name"}
 
     boolean isSecret = false;
