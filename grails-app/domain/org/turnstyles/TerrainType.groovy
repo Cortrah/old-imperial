@@ -16,8 +16,8 @@ class TerrainType {
         code blank: false
         description nullable: true
 
-        landCost()
-        airCost()
-        navalCost()
+        landCost nullable: true
+        airCost nullable: true
+        navalCost nullable: true
     }
 }
