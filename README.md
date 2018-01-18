@@ -1,3 +1,25 @@
+#To Run
+    
+    http://localhost:8080
+    http://localhost:8080/graphql/browser
+
+#To Query
+    
+    {
+      terrainTypeList {
+        name
+      }
+    }
+    
+    http://myapi/graphql?query={terrainTypeList{name}}
+    
+    or in a post
+    {
+      "query": "...",
+      "operationName": "...",
+      "variables": { "myVariable": "someValue", ... }
+    }
+    
 # CONFIGULAR
     curl -s get.sdkman.io | bash
     should be at
