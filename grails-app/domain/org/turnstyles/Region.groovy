@@ -4,9 +4,9 @@ package org.turnstyles
 // Don't bother with secondTributor, Provinces, or minormap and it's quadrant yet
 
 class Region {
-    String name = "RegionName"
-    String code = "RegionCode"
-    String label = "RegionLabel"
+    String name = "Name"
+    String code = "Code"
+    String label = "Label"
     String description = "default description"
     String notes = "notes"
     String toString() {"$name"}
@@ -33,7 +33,7 @@ class Region {
         name blank: false
         code blank: false
         label blank: false
-        description nullable: true
+        description blank: true
         notes blank: true
 
         kindred nullable : true

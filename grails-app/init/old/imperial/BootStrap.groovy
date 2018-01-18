@@ -2,26 +2,74 @@ package old.imperial
 
 import org.turnstyles.TerrainType
 import org.turnstyles.AllegianceType
-import org.turnstyles.MajorMap
 import org.turnstyles.MovementType
 import org.turnstyles.BorderType
-import org.turnstyles.MovementEffect
-import org.turnstyles.MovementRule
 import org.turnstyles.Kindred
 import org.turnstyles.Game
 import org.turnstyles.Herald
 import org.turnstyles.Realm
-
-import org.turnstyles.Region
 import org.turnstyles.Turn
-import org.turnstyles.RealmTurn
-import org.turnstyles.RegionBorders
-import org.turnstyles.RegionTurnStatus
 import org.turnstyles.Location
+import org.turnstyles.RegionBorders
+import org.turnstyles.Region
+import org.turnstyles.MovementRule
+import org.turnstyles.MovementEffect
+import org.turnstyles.MajorMap
+
+import org.turnstyles.RealmTurn
+import org.turnstyles.RegionTurnStatus
 
 class BootStrap {
 
     def init = { servletContext ->
+
+        Game FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
+        Herald Cortrah = new Herald(name: "Cortrah", code: "C", label: "Cort").save()
+        Herald Kolgrim = new Herald(name: "Kolgrim", label: "Gman").save()
+
+        Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek").save()
+
+        RealmTurn KomTurn1 = new RealmTurn(name: "Komolek Turn1", code: "Kom:1",
+                startingIsi: 193, startingTv: 42, endingIsi: 195, endingTv: 43,
+                realm: Kommolek, turn: Turn1)
+                .addToRegionTurnStatuses(kom1, bre1)
+                .save()
+
+        RegionTurnStatus kom1 = new RegionTurnStatus(name: "Komolek:1", code: "Kom:1", status: "homeland", resistance: 3, realm:Kommolek,
+                region: KomRegion1, hasRoad: false, isSecret: false, isInimical: false, turn: Turn1)
+                .addToLocations(komLoc1, komLoc2)
+                .save()
+        RegionTurnStatus bre1 = new RegionTurnStatus(name: "Bregil:1", code: "Bre:1", status: "friendly", resistance: 3, realm:Kommolek,
+                region: KomRegion2, hasRoad: false, isSecret: false, isInimical: false, turn: Turn1)
+                .addToLocations(komLoc3, komLoc4)
+                .save()
+
+        Turn Turn1 = new Turn(name: "1540-1545", number: "1", startingYear: 1540, endingYear: 1545).save()
+
+        Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek", kindred: WenemetKin, terrain: Forest ).save()
+        Region KomRegion2 = new Region(name: "Bregil", code: "Bre", label: "Bregil", kindred: SaurianKin, terrain: Hill ).save()
+
+        RegionBorders border1 = new RegionBorders(name: "Komolek:Bregil", code: "Kom:Bre", source:KomRegion1, sink:KomRegion2, borderType: adjBorder).save()
+
+        Location komLoc1 = new Location(name: "Komolek:Cy", code: "Kom:Cy", region: KomRegion1).save()
+        Location komLoc2 = new Location(name: "Komolek:Ct", code: "Kom:Ct", region: KomRegion1).save()
+        Location komLoc3 = new Location(name: "Bregil:Cy", code: "Bre:Cy", region: KomRegion2).save()
+        Location komLoc4 = new Location(name: "Bregil:Ct", code: "Bre:Ct", region: KomRegion2).save()
+
+        MajorMap mainMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul",
+                description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
+                x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false)
+                .addToRegions(KomRegion1, KomRegion2)
+                .save()
+
+        MovementEffect adjLBCost = new MovementEffect(
+                name: "Adjacent Land Border Cost", code: "adj",
+                description: "The cost for moving across an adjacent land border",
+                targetType: "cost", operator: "+", ammount:0).save()
+
+        MovementRule movementRule = new MovementRule(
+                name: "Adj L Border", code: "AdjLB", description: "Going into an adjacent land region",
+                preconditions: "always", movementType: landMv, movementEffect: adjLBCost).save()
 
         AllegianceType Unknown = new AllegianceType(name: "Unknown", code: "?").save()
         AllegianceType Homeland = new AllegianceType(name: "Homeland", code: "Ho").save()
@@ -57,7 +105,7 @@ class BootStrap {
                 name: "Unknown", code: "?", description: "a mystery",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType adjBorder = new BorderType(
-                name: "Adjacent", code: "Adj", description: "a default border, easy to cross at no penalty",
+                name: "Adjacent", code: ":", description: "a default land border, easy to cross at no penalty",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType roadBorder = new BorderType(
                 name: "Road", code: "Rd", description: "A Road",
@@ -111,17 +159,6 @@ class BootStrap {
                 name: "Monsoon Current", code: "MC", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
 
-
-        MovementEffect adjLCost = new MovementEffect(
-                name: "Adjacent Land Border Cost", code: "albc",
-                description: "The cost for moving across an adjacent land border",
-                targetType: "cost", operator: "+", ammount:0).save()
-
-
-        MovementRule movementRule = new MovementRule(
-                name: "Adj L Border Cost", code: "Adj_l_cst", description: "The cost of going into an adjacent land region",
-                preconditions: "always", movementType: landMv, movementEffect: adjLCost).save()
-
         Kindred UnknownKin = new Kindred(name: "Unknown", code: "?").save()
         Kindred SaurianKin = new Kindred(name: "Saurian", code: "S").save()
         Kindred YaminionKin = new Kindred(name: "Yaminion", code: "Y").save()
@@ -150,39 +187,6 @@ class BootStrap {
         TerrainType RoughSeas = new TerrainType(name: "RoughSeas", code: "RS", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Cavern = new TerrainType(name: "Cavern", code: "Cv", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Digging = new TerrainType(name: "Digging", code: "Di", landCost: 1, airCost: 1, navalCost: null).save()
-
-        MajorMap mainMap = new MajorMap(name: "Sahul",
-                code: "Sah",
-                description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
-                height: 1400, width: 2600, bg: "sahul.svg")
-                .addToRegions("name": "Kommolek", "code": "Kom",
-                "description": "Capital of the yagnarist realm of Kommolek")
-                .save()
-
-        Game FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
-        Herald Cortrah = new Herald(name: "Cortrah", code: "C", label: "Cort").save()
-        Herald Kolgrim = new Herald(name: "Kolgrim", label: "Gman").save()
-
-        Turn Turn1 = new Turn(name: "1540-1545", number: "1").save()
-
-        Region KomRegion1 = new Region(name: "Komolek", code: "ko1", label: "kom1", kindred: WenemetKin ).save()
-        Region KomRegion2 = new Region(name: "Bregil", code: "br1", label: "kom1").save()
-        RegionBorders border1 = new RegionBorders(name: "k1:adj:k2", code: "k1:adj:k2").save()
-
-        Location komLoc1= new Location(name: "Kom:komLoc1", code: "Kom:cty").save()
-        Location komLoc2 = new Location(name: "Kom:komLoc2", code: "Kom:city").save()
-        Location komLoc3 = new Location(name: "Kom:komLoc3", code: "Kom:cty").save()
-        Location komLoc4 = new Location(name: "Kom:komLoc4", code: "Kom:city").save()
-
-        Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek").save()
-
-        RegionTurnStatus rTS1 = new RegionTurnStatus(name: "RegionTurnStatus", code: "Rts").save()
-        RealmTurn KomTurn1 = new Turn(name: "KomTurn1", code: "Kom:1",
-                startingIsi: 193, startingTv: 42, endingIsi: 195, endingTv: 43,
-                realm: Kommolek, turn: Turn1).save()
-
-
-
     }
 
     def destroy = {

@@ -2,8 +2,8 @@ package org.turnstyles
 
 class Location {
 
-    String name = "RegionName:Country"
-    String code = "RegionCode:cty"
+    String name = "RegionName:Cy"
+    String code = "Cy"
     String label = "country"
     String toString() {"$code"}
 

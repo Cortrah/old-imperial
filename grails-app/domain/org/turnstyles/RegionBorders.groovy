@@ -1,7 +1,7 @@
 package org.turnstyles
 
 class RegionBorders {
-    String name = "Source:BorderType:Sink"
+    String name = "SourceBorderTypeSink"
     Region source
     BorderType borderType
     Region sink

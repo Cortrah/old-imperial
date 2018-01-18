@@ -1,8 +1,8 @@
 package org.turnstyles
 
 class MovementRule {
-    String name
-    String code = 'mv'
+    String name = "name"
+    String code = 'code'
     String description = "movement rule"
     String toString() {"$name $movementType $movementEffect"}
 
