@@ -9,6 +9,7 @@ import org.turnstyles.MovementEffect
 import org.turnstyles.MovementRule
 import org.turnstyles.MovementType
 import org.turnstyles.TerrainType
+
 import org.turnstyles.Turn
 import org.turnstyles.Realm
 import org.turnstyles.MajorMap
@@ -151,21 +152,23 @@ class BootStrap {
         TerrainType Digging = new TerrainType(name: "Digging", code: "Di", landCost: 1, airCost: 1, navalCost: null).save()
 
         Game FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
-        Turn Turn1 = new Turn(name: "1540-1545", number: "1", startingYear: 1540, endingYear: 1545, game: FireAndIce).save()
+        Turn Turn1 = new Turn(name: "1540-1545", number: 1, startingYear: 1540, endingYear: 1545, game: FireAndIce).save()
 
         Herald Cortrah = new Herald(name: "Cortrah", code: "C", label: "Cort").save()
-        Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek", herald: Cortrah).save()
+        Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
+                game: FireAndIce, herald: Cortrah).save()
 
         Herald Kolgrim = new Herald(name: "Kolgrim", label: "Gman").save()
-        Realm DThace = new Realm(name: "Dutchy of Thace", code: "DTh", label: "D.Thace", herald: Kolgrim).save()
+        Realm DThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
+                game: FireAndIce, herald: Kolgrim).save()
 
         MajorMap sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul",
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
-                x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false)
-                .save()
+                x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 
         Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
                 kindred: WenemetKin, terrain: Forest, majorMap: sahulMap).save()
+
         Region KomRegion2 = new Region(name: "Bregil", code: "Bre", label: "Bregil",
                 kindred: SaurianKin, terrain: Hill, majorMap: sahulMap).save()
 

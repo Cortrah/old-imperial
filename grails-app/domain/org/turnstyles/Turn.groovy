@@ -2,7 +2,7 @@ package org.turnstyles
 
 class Turn {
     String name = "1440-1445"
-    String number = "1"
+    Integer number = 1
     Integer startingYear = 1440
     Integer endingYear = 1445
     String notes = "Notes"
