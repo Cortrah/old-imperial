@@ -1,9 +1,9 @@
 package org.turnstyles
 
 class Kindred {
-    String name = "Human"
-    String code = "H"
-    String label = "Human"
+    String name = "Name"
+    String code = "Code"
+    String label = "Label"
     String description = "Description"
     String notes = "Notes"
     String toString() {"$name"}

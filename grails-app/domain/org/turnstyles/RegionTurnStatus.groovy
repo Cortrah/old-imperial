@@ -6,13 +6,11 @@ class RegionTurnStatus {
     String notes = "Notes"
     String toString() {"$name"}
 
-    String  status = "?"
     Integer resistance = 3
 
     Realm realm
     Region region
     AllegianceType allegiance
-    TerrainType terrain
 
 //    Integer Gp = 0
 //    Integer Ap = 0
@@ -38,13 +36,11 @@ class RegionTurnStatus {
         region nullable: false
 
         allegiance nullable: true
-        terrain nullable: true
 
         hasRoad nullable: false
         isSecret nullable: false
         isInimical nullable: false
 
-        status inList: ['?','free', 'pacified', 'tributary', 'allied', 'friendly', 'homeland']
         resistance range: 1..10
     }
 }

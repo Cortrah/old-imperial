@@ -1,9 +1,9 @@
 package org.turnstyles
 
 class Realm {
-    String name = "Realm Name"
-    String code = "R"
-    String label = "Realm"
+    String name = "Name"
+    String code = "Code"
+    String label = "Label"
     String description = "default description"
     String toString() {"$name"}
 
@@ -19,6 +19,6 @@ class Realm {
         label blank: false
         description nullable: true
 
-        herald nullable: false
+        herald nullable: true
     }
 }

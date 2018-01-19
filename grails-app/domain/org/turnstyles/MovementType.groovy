@@ -1,9 +1,9 @@
 package org.turnstyles
 
 class MovementType {
-    String name = "Land"
-    String code = 'L'
-    String description = "movement by land"
+    String name = "Name"
+    String code = 'Code'
+    String description = "description"
     String toString() {"$name"}
 
     static graphql = true

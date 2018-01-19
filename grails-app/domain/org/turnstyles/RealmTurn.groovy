@@ -25,6 +25,8 @@ class RealmTurn {
         code blank: false
         notes blank: true
 
+        realm nullable: true
+
         startingIsi()
         startingTv()
         endingIsi()

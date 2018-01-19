@@ -2,9 +2,9 @@ package org.turnstyles
 
 class Location {
 
-    String name = "RegionName:Cy"
-    String code = "Cy"
-    String label = "country"
+    String name = "Region:Co"
+    String code = "Co"
+    String label = "county"
     String toString() {"$code"}
 
     boolean isSecret = false;
