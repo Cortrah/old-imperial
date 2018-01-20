@@ -6,22 +6,22 @@ class RegionTurnStatus {
     String notes = "Notes"
     String toString() {"$name"}
 
-    Integer resistance = 3
-
     Realm realm
     Region region
     AllegianceType allegiance
 
-//    Integer Gp = 0
-//    Integer Ap = 0
-//    Integer Nfp = 0
-//    Integer Mana = 0
-//    Integer Pwb = 0
-//    Integer Tv = 0
+    Integer Gp = 0
+    Integer Ap = 0
+    Integer Nfp = 0
+    Integer Mana = 0
+    Integer Pwb = 0
+    Integer Tv = 0
 
     Boolean hasRoad = false
     Boolean isSecret = false
     Boolean isInimical = false
+
+    Integer resistance = 3
 
     static hasMany = [locations: Location]
     static belongsTo = [turn: Turn]
@@ -34,8 +34,14 @@ class RegionTurnStatus {
 
         realm nullable: true
         region nullable: false
-
         allegiance nullable: true
+
+        Gp()
+        Ap()
+        Nfp()
+        Mana()
+        Pwb()
+        Tv()
 
         hasRoad nullable: false
         isSecret nullable: false

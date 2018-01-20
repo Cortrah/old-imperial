@@ -162,7 +162,7 @@ class BootStrap {
         Realm DThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
                 game: FireAndIce, herald: Kolgrim).save()
 
-        MajorMap sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul",
+        MajorMap sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul", game: FireAndIce,
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 
@@ -177,26 +177,24 @@ class BootStrap {
         Location komLoc3 = new Location(name: "Bregil:Co", code: "Bre:Co", region: KomRegion2).save()
         Location komLoc4 = new Location(name: "Bregil:Ct", code: "Bre:Ct", region: KomRegion2).save()
 
-//        RegionBorders border1 = new RegionBorders(name: "Komolek:Bregil", code: "Kom:Bre", source:KomRegion1, sink:KomRegion2, borderType: adjBorder).save()
+        RegionBorders border1 = new RegionBorders(name: "Komolek:Bregil", code: "Kom:Bre", source:KomRegion1, sink:KomRegion2, borderType: adjBorder).save()
 
-//        RealmTurn KomTurn1 = new RealmTurn(name: "Komolek Turn1", code: "Kom:1", notes: "not much",
-//                realm: Kommolek, turn: Turn1)
-//                .save()
+        RealmTurn KomTurn1 = new RealmTurn(name: "Komolek Turn1", code: "Kom:1", notes: "not much",
+                realm: Kommolek, turn: Turn1).save()
 
-//        RegionTurnStatus kom1 = new RegionTurnStatus(name: "Komolek:1540-1545", code: "Kom:1",
-//                realm:Kommolek, region: KomRegion1, allegiance: Homeland, turn: Turn1)
-//                .addToLocations(komLoc1, komLoc2)
-//                .save()
-//
+//        RegionTurnStatus kom1 = new RegionTurnStatus(name: "Komolek:1540-1545", code: "Kom:1", notes: "Some thoughts",
+//                realm: Kommolek, region: KomRegion1, allegiance: Homeland, turn: Turn1,
+//                Gp: 0, Ap: 0, Nfp: 1, Mana: 2, Pwb: 3, Tv: 3,
+//                hasRoad: true, isSecret: false, isInimical: false, resistance: 5).save()
+
+//                .addToLocations(komLoc1, komLoc2).save()
+
 //        RegionTurnStatus bre1 = new RegionTurnStatus(name: "Bregil:1", code: "Bre:1",
 //                realm:Kommolek, region: KomRegion2, allegiance: Friendly, turn: Turn1)
 //                .addToLocations(komLoc3, komLoc4)
 //                .save()
 //
 //        KomTurn1.addToRegionTurnStatuses(kom1, bre1)
-
-
-
     }
 
     def destroy = {
