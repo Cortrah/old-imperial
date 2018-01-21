@@ -1,7 +1,8 @@
 package org.turnstyles
 
 class RegionBorders {
-    String name = "SourceBorderTypeSink"
+    String name = "Source:Sink"
+    String code = "S:S"
     Region source
     BorderType borderType
     Region sink
@@ -13,6 +14,7 @@ class RegionBorders {
     static graphql = true
     static constraints = {
         name blank: false
+        code blank: false
         source nullable: false
         borderType nullable: false
         sink nullable: false

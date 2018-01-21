@@ -10,12 +10,12 @@ class RegionTurnStatus {
     Region region
     AllegianceType allegiance
 
-    Integer Gp = 0
-    Integer Ap = 0
-    Integer Nfp = 0
-    Integer Mana = 0
-    Integer Pwb = 0
-    Integer Tv = 0
+    Double gp = 0.0
+    Double ap = 0.0
+    Double nfp = 0.0
+    Double mana = 0.0
+    Double pwb = 0.0
+    Double tv = 0.0
 
     Boolean hasRoad = false
     Boolean isSecret = false
@@ -24,7 +24,6 @@ class RegionTurnStatus {
     Integer resistance = 3
 
     static hasMany = [locations: Location]
-    static belongsTo = [turn: Turn]
 
     static graphql = true
     static constraints = {
@@ -32,16 +31,14 @@ class RegionTurnStatus {
         code blank: false
         notes blank: true
 
-        realm nullable: true
         region nullable: false
-        allegiance nullable: true
 
-        Gp()
-        Ap()
-        Nfp()
-        Mana()
-        Pwb()
-        Tv()
+        gp()
+        ap()
+        nfp()
+        mana()
+        pwb()
+        tv()
 
         hasRoad nullable: false
         isSecret nullable: false
