@@ -162,7 +162,7 @@ class BootStrap {
         Realm DThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
                 game: FireAndIce, herald: Kolgrim).save()
 
-        MajorMap sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul",
+        MajorMap sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul", game: FireAndIce,
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 
