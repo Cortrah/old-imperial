@@ -194,9 +194,6 @@ class BootStrap {
                 name: "Bregil:1", code: "Bre:1", "notes": "notie noteular",
                 realm:Kommolek, region: KomRegion2, allegiance: Friendly)
                 .save()
-
-        //                .addToLocations(komLoc3, komLoc4)
-        // KomTurn1.addToRegionTurnStatuses(kom1, bre1)
     }
 
     def destroy = {

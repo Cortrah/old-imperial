@@ -26,7 +26,7 @@ class Region {
     String path = "m0,0 L100,0 L100,100 L0,100 z"
 
     static belongsTo = [majorMap: MajorMap]
-    static hasMany = [regionTurnStatuses: RegionTurnStatus]
+    static hasMany = [regionTurnStatuses: RegionTurnStatus, locations: Location]
 
     static graphql = true
     static constraints = {
