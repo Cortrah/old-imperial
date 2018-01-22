@@ -194,6 +194,8 @@ class BootStrap {
                 name: "Bregil:1", code: "Bre:1", "notes": "notie noteular",
                 realm:Kommolek, region: KomRegion2, allegiance: Friendly)
                 .save()
+
+        FireAndIce.currentTurn = Turn1
     }
 
     def destroy = {

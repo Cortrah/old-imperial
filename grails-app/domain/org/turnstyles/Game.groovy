@@ -8,7 +8,7 @@ class Game {
     String toString() {"$name"}
 
     Turn currentTurn
-    static hasMany = [turns: Turn]
+    static hasMany = [turns: Turn, majorMap: MajorMap]
 
     static graphql = true
     static constraints = {
