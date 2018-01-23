@@ -41,55 +41,55 @@ class BootStrap {
                 name: "Adjacent", code: ":", description: "a default land border, easy to cross at no penalty",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType roadBorder = new BorderType(
-                name: "Road", code: "Rd", description: "A Road",
+                name: "Road", code: "_", description: "A Road",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType riverBorder = new BorderType(
-                name: "River", code: "Ri", description: "",
+                name: "River", code: "~", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType canalBorder = new BorderType(
-                name: "Canal", code: "Ca", description: "",
+                name: "Canal", code: "-~-", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType bridgeBorder = new BorderType(
-                name: "Bridge", code: "Br", description: "",
+                name: "Bridge", code: "=", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType minMtnBorder = new BorderType(
-                name: "Minor Mountain", code: "MiMtn", description: "",
+                name: "Minor Mountain", code: "-m-", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType majMtnBorder = new BorderType(
-                name: "Major Mountain", code: "MaMtn", description: "",
+                name: "Major Mountain", code: "-M-", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType minMtnPassBorder = new BorderType(
-                name: "Minor Mountain Pass", code: "MiMP", description: "",
+                name: "Minor Mountain Pass", code: "_m_", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType majMtnPassBorder = new BorderType(
-                name: "Major Mountain Pass", code: "MaMP", description: "",
+                name: "Major Mountain Pass", code: "_M_", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType greatWallBorder = new BorderType(
-                name: "Great Wall", code: "GW", description: "",
+                name: "Great Wall", code: "|", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType tunnelBorder = new BorderType(
-                name: "Tunnel", code: "T", description: "",
+                name: "Tunnel", code: "-_-", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType blockedTunnelBorder = new BorderType(
-                name: "Blocked Tunnel", code: "BT", description: "",
+                name: "Blocked Tunnel", code: "-x-", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType gateBorder = new BorderType(
-                name: "Gate", code: "Gt", description: "",
+                name: "Gate", code: "@", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType teleportationBorder = new BorderType(
-                name: "Teleportation", code: "T", description: "",
+                name: "Teleportation", code: "*", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType stairsBorder = new BorderType(
-                name: "Stairs", code: "St", description: "",
+                name: "Stairs", code: "_-", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType cliffsBorder = new BorderType(
-                name: "Cliffs", code: "Cf", description: "",
+                name: "Cliffs", code: "||", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType currentBorder = new BorderType(
-                name: "Current", code: "Cu", description: "",
+                name: "Current", code: "~/", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         BorderType monsoonCurrentBorder = new BorderType(
-                name: "Monsoon Current", code: "MC", description: "",
+                name: "Monsoon Current", code: "~%", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
 
         Kindred UnknownKin = new Kindred(name: "Unknown", code: "?").save()
@@ -133,15 +133,16 @@ class BootStrap {
                 preconditions: "always", movementType: landMv, movementEffect: adjLBCost).save()
 
 
-        TerrainType unknownTt = new TerrainType(name: "Unknown", code: "?", description: "A Mystery", landCost: null, airCost: null, navalCost: null).save()
-        TerrainType ClearTt = new TerrainType(name: "Clear", code: "Cl", description: "Flat terrain", landCost: 1, airCost: 1, navalCost: null).save()
+        TerrainType UnknownTerrainType = new TerrainType(name: "Unknown", code: "?", description: "A Mystery", landCost: null, airCost: null, navalCost: null).save()
+        TerrainType Clear = new TerrainType(name: "Clear", code: "Cl", description: "Flat terrain", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Desert = new TerrainType(name: "Desert", code: "De", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Steppe = new TerrainType(name: "Steppe", code: "St", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Island = new TerrainType(name: "Island", code: "Is", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Forest = new TerrainType(name: "Forest", code: "Fo", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Hill = new TerrainType(name: "Hill", code: "Hi", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Mountain = new TerrainType(name: "Mountain", code: "Mt", landCost: 1, airCost: 1, navalCost: null).save()
-        TerrainType Sea = new TerrainType(name: "Sea", code: "Se", landCost: 0, airCost: 1, navalCost: 1).save()
+        TerrainType Sea = new TerrainType(name: "Sea", code: "Sea", landCost: 0, airCost: 1, navalCost: 1).save()
+        TerrainType UnderSea = new TerrainType(name: "UnderSea", code: "UnS", landCost: 0, airCost: 0, navalCost: 1).save()
         TerrainType Lake = new TerrainType(name: "Lake", code: "Lk", landCost: 0, airCost: 1, navalCost: 1).save()
         TerrainType Swamp = new TerrainType(name: "Swamp", code: "Sw", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Jungle = new TerrainType(name: "Jungle", code: "J", landCost: 1, airCost: 1, navalCost: null).save()
@@ -152,7 +153,7 @@ class BootStrap {
         TerrainType Digging = new TerrainType(name: "Digging", code: "Di", landCost: 1, airCost: 1, navalCost: null).save()
 
         Game FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
-        Turn Turn1 = new Turn(name: "1540-1545", number: 1, startingYear: 1540, endingYear: 1545, game: FireAndIce).save()
+        Turn Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: FireAndIce).save()
 
         Herald Cortrah = new Herald(name: "Cortrah", code: "C", label: "Cort").save()
         Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
@@ -167,35 +168,52 @@ class BootStrap {
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 
         Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
-                kindred: WenemetKin, terrain: Forest, majorMap: sahulMap).save()
+                kindred: WenemetKin, terrain: Clear, majorMap: sahulMap).save()
 
-        Region KomRegion2 = new Region(name: "Bregil", code: "Bre", label: "Bregil",
-                kindred: SaurianKin, terrain: Hill, majorMap: sahulMap).save()
+        Region KomRegion2 = new Region(name: "Korev", code: "Kor", label: "Korev",
+                kindred: SaurianKin, terrain: Clear, majorMap: sahulMap).save()
 
-        Location komLoc1 = new Location(name: "Komolek:Co", code: "Kom:Co", region: KomRegion1).save()
-        Location komLoc2 = new Location(name: "Komolek:Ct", code: "Kom:Ct", region: KomRegion1).save()
-        Location komLoc3 = new Location(name: "Bregil:Co", code: "Bre:Co", region: KomRegion2).save()
-        Location komLoc4 = new Location(name: "Bregil:Ct", code: "Bre:Ct", region: KomRegion2).save()
+        Region KomRegion3 = new Region(name: "Colledhu", code: "Col", label: "Colledhu",
+                kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
+
+        Region KomRegion4 = new Region(name: "Namdynn", code: "Nam", label: "Namdynn",
+                kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
+
+
+        Location komLoc1 = new Location(name: "County of Komolek", code: "Kom", label: "Kommolek", region: KomRegion1).save()
+        Location komLoc2 = new Location(name: "City II of Treskaw", code: "Tres", label: "Treskaw", region: KomRegion1).save()
+
+        Location komLoc3 = new Location(name: "County of Korev", code: "Kor", label: "Korev", region: KomRegion2).save()
+        Location komLoc4 = new Location(name: "City I of Kedhlow", code: "Ked", label: "Kedhlow", region: KomRegion2).save()
+
+        Location komLoc5 = new Location(name: "County of Colledhu", code: "Col", label: "Colledhu", region: KomRegion3).save()
+        Location komLoc6 = new Location(name: "Military Academy of Bituveco", code: "Bit", label: "Bituveco", region: KomRegion3).save()
+
+        Location komLoc7 = new Location(name: "County of Namdynn", code: "Nam", label: "Namdynn", region: KomRegion4).save()
 
         RegionBorders border1 = new RegionBorders(
-                name: "Komolek:Bregil", code: "Kom:Bre",
+                name: "Komolek:Korev", code: "Kom:Kor",
                 source:KomRegion1, sink:KomRegion2, borderType: adjBorder).save()
 
-        RealmTurn KomTurn1 = new RealmTurn(name: "Komolek Turn1", code: "Kom:1", notes: "not much",
-                realm: Kommolek, turn: Turn1)
+        RegionBorders border2 = new RegionBorders(
+                name: "Komolek_Korev", code: "Kom_Kor",
+                source:KomRegion1, sink:KomRegion2, borderType: roadBorder).save()
+
+        RealmTurn KomTurn25 = new RealmTurn(name: "Komolek Turn25", code: "Kom:1", notes: "not much",
+                realm: Kommolek, turn: Turn25)
                 .save()
 
-        RegionTurnStatus kom1 = new RegionTurnStatus(
-                name: "Komolek:1540-1545", code: "Kom:1", "notes": "notie noteular",
+        RegionTurnStatus kom25 = new RegionTurnStatus(
+                name: "Komolek:1540-1545", code: "Kom:25", "notes": "notie noteular",
                 realm: Kommolek, region: KomRegion1, allegiance: Homeland)
                 .save()
 
-        RegionTurnStatus bre1 = new RegionTurnStatus(
-                name: "Bregil:1", code: "Bre:1", "notes": "notie noteular",
+        RegionTurnStatus bre25 = new RegionTurnStatus(
+                name: "Bregil:25", code: "Bre:25", "notes": "notie noteular",
                 realm:Kommolek, region: KomRegion2, allegiance: Friendly)
                 .save()
 
-        FireAndIce.currentTurn = Turn1
+        FireAndIce.currentTurn = Turn25
     }
 
     def destroy = {
