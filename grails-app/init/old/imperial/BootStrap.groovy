@@ -216,21 +216,41 @@ class BootStrap {
                 realm: Kommolek, turn: Turn25)
                 .save()
 
-
-
-
-        // add region data for all 4 regions
         RegionTurnStatus kom25 = new RegionTurnStatus(
                 name: "Komolek:1540-1545", code: "Kom:25", "notes": "notie noteular",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
                 realm: Kommolek, region: KomRegion1, allegiance: Homeland)
                 .save()
 
-        RegionTurnStatus bre25 = new RegionTurnStatus(
-                name: "Bregil:25", code: "Bre:25", "notes": "notie noteular",
+        RegionTurnStatus kor25 = new RegionTurnStatus(
+                name: "Korev:1540-1545", code: "Kor:25", "notes": "notie noteular",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
                 realm:Kommolek, region: KomRegion2, allegiance: Friendly)
                 .save()
 
+        RegionTurnStatus col25 = new RegionTurnStatus(
+                name: "Colledhu:1540-1545", code: "Col:25", "notes": "notie noteular",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, region: KomRegion3, allegiance: Friendly)
+                .save()
+
+        RegionTurnStatus Nam25 = new RegionTurnStatus(
+                name: "Namdynn:1540-1545", code: "Nam:25", "notes": "notie noteular",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, region: KomRegion4, allegiance: Friendly)
+                .save()
+
+
         // Add Leaders
+        // Leader Actions esp Movement
+        //
+
+
+        // Possibly merge Region and Realm TurnStatuses back into the main class to simplify them
 
         FireAndIce.currentTurn = Turn25
     }
