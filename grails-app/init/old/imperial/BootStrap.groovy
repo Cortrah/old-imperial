@@ -247,8 +247,23 @@ class BootStrap {
 
         // Add Leaders
         // Leader Actions esp Movement
-        //
+        // ActionCategories
+        // TrainingTypes
+        // AgentTypes
 
+        // Realm Details
+
+        // Items
+        // Units
+        // Leaders Items
+        // Leaders UnitTypeGroups
+        // Locations Items
+        // Locations UnitTypeGroups
+        // UnitTypes
+
+        // Spells
+        // Features
+        // Constructs
 
         // Possibly merge Region and Realm TurnStatuses back into the main class to simplify them
 
