@@ -1,3 +1,15 @@
+# Introduction
+
+And lo and behold... it arose
+
+Old Imperial, the engine of scribes, toiling to their master Dei
+
+Cogs of a vast empire, they sifted... they churned... they recorded... 
+
+distiling with their pens an elixir that would nurture the dreams of many for decades to come.
+
+
+
 #To Run
     
     http://localhost:8080

@@ -199,10 +199,27 @@ class BootStrap {
                 name: "Komolek_Korev", code: "Kom_Kor",
                 source:KomRegion1, sink:KomRegion2, borderType: roadBorder).save()
 
+        RegionBorders border3 = new RegionBorders(
+                name: "Korev:Colledhu", code: "Kor:Col",
+                source:KomRegion2, sink:KomRegion3, borderType: adjBorder).save()
+
+        RegionBorders border4 = new RegionBorders(
+                name: "Korev_Col", code: "Kor_Col",
+                source:KomRegion2, sink:KomRegion3, borderType: roadBorder).save()
+
+        RegionBorders border5 = new RegionBorders(
+                name: "Colledhu-M-Namdynn", code: "Col-M-Nam",
+                source:KomRegion3, sink:KomRegion4, borderType: majMtnBorder).save()
+
+
         RealmTurn KomTurn25 = new RealmTurn(name: "Komolek Turn25", code: "Kom:1", notes: "not much",
                 realm: Kommolek, turn: Turn25)
                 .save()
 
+
+
+
+        // add region data for all 4 regions
         RegionTurnStatus kom25 = new RegionTurnStatus(
                 name: "Komolek:1540-1545", code: "Kom:25", "notes": "notie noteular",
                 realm: Kommolek, region: KomRegion1, allegiance: Homeland)
@@ -212,6 +229,8 @@ class BootStrap {
                 name: "Bregil:25", code: "Bre:25", "notes": "notie noteular",
                 realm:Kommolek, region: KomRegion2, allegiance: Friendly)
                 .save()
+
+        // Add Leaders
 
         FireAndIce.currentTurn = Turn25
     }
