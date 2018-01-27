@@ -11,11 +11,26 @@ class Region {
     String notes = "notes"
     String toString() {"$name"}
 
+    Turn turn
+    Realm realm
+    Region region
+    AllegianceType allegiance
     Kindred kindred
     TerrainType terrain
 
+    Double gp = 0.0
+    Double ap = 0.0
+    Double nfp = 0.0
+    Double mana = 0.0
+    Double pwb = 0.0
+    Double tv = 0.0
+
+    Integer resistance = 3
+
+    boolean hasRoad = false
     boolean isSecret = false
     boolean bordersVolcano = false
+    boolean isInimical = false
 
     Integer x = 0
     Integer y = 0
@@ -26,7 +41,7 @@ class Region {
     String path = "m0,0 L100,0 L100,100 L0,100 z"
 
     static belongsTo = [majorMap: MajorMap]
-    static hasMany = [regionTurnStatuses: RegionTurnStatus, locations: Location]
+    static hasMany = [locations: Location]
 
     static graphql = true
     static constraints = {
@@ -39,7 +54,21 @@ class Region {
         kindred nullable : true
         terrain nullable: true
         isSecret nullable: false
+
+        region nullable: false
+        hasRoad nullable: false
+        isSecret nullable: false
+        isInimical nullable: false
         bordersVolcano()
+
+        resistance range: 1..10
+
+        gp()
+        ap()
+        nfp()
+        mana()
+        pwb()
+        tv()
 
         x()
         y()

@@ -18,7 +18,6 @@ import org.turnstyles.Location
 import org.turnstyles.RegionBorders
 
 import org.turnstyles.RealmTurn
-import org.turnstyles.RegionTurnStatus
 
 class BootStrap {
 
@@ -168,15 +167,27 @@ class BootStrap {
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 
         Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm: Kommolek, allegiance: Homeland,
                 kindred: WenemetKin, terrain: Clear, majorMap: sahulMap).save()
 
         Region KomRegion2 = new Region(name: "Korev", code: "Kor", label: "Korev",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, allegiance: Friendly,
                 kindred: SaurianKin, terrain: Clear, majorMap: sahulMap).save()
 
         Region KomRegion3 = new Region(name: "Colledhu", code: "Col", label: "Colledhu",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, allegiance: Friendly,
                 kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
 
         Region KomRegion4 = new Region(name: "Namdynn", code: "Nam", label: "Namdynn",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, allegiance: Friendly,
                 kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
 
 
@@ -216,36 +227,9 @@ class BootStrap {
                 realm: Kommolek, turn: Turn25)
                 .save()
 
-        RegionTurnStatus kom25 = new RegionTurnStatus(
-                name: "Komolek:1540-1545", code: "Kom:25", "notes": "notie noteular",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
-                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm: Kommolek, region: KomRegion1, allegiance: Homeland)
-                .save()
-
-        RegionTurnStatus kor25 = new RegionTurnStatus(
-                name: "Korev:1540-1545", code: "Kor:25", "notes": "notie noteular",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
-                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm:Kommolek, region: KomRegion2, allegiance: Friendly)
-                .save()
-
-        RegionTurnStatus col25 = new RegionTurnStatus(
-                name: "Colledhu:1540-1545", code: "Col:25", "notes": "notie noteular",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
-                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm:Kommolek, region: KomRegion3, allegiance: Friendly)
-                .save()
-
-        RegionTurnStatus Nam25 = new RegionTurnStatus(
-                name: "Namdynn:1540-1545", code: "Nam:25", "notes": "notie noteular",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
-                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm:Kommolek, region: KomRegion4, allegiance: Friendly)
-                .save()
-
-
         // Add Leaders
+
+
         // Leader Actions esp Movement
         // ActionCategories
         // TrainingTypes
@@ -268,6 +252,7 @@ class BootStrap {
         // Possibly merge Region and Realm TurnStatuses back into the main class to simplify them
 
         FireAndIce.currentTurn = Turn25
+
     }
 
     def destroy = {
