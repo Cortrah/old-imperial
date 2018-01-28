@@ -25,12 +25,12 @@ class Region {
     Double pwb = 0.0
     Double tv = 0.0
 
-    Integer resistance = 3
+    Boolean hasRoad = false
+    Boolean isSecret = false
+    Boolean bordersVolcano = false
+    Boolean isInimical = false
 
-    boolean hasRoad = false
-    boolean isSecret = false
-    boolean bordersVolcano = false
-    boolean isInimical = false
+    Integer resistance = 3
 
     Integer x = 0
     Integer y = 0
@@ -55,13 +55,13 @@ class Region {
         terrain nullable: true
         isSecret nullable: false
 
+        turn nullable: false
+        realm nullable: true
         region nullable: false
         hasRoad nullable: false
         isSecret nullable: false
         isInimical nullable: false
-        bordersVolcano()
-
-        resistance range: 1..10
+        bordersVolcano nullable: false
 
         gp()
         ap()
@@ -69,6 +69,8 @@ class Region {
         mana()
         pwb()
         tv()
+
+        resistance range: 1..10
 
         x()
         y()

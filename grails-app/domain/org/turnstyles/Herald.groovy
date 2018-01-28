@@ -15,7 +15,7 @@ class Herald {
         name blank: false
         code blank: false
         label blank: false
-        realm nullable: true
+        realm nullable: false
         description nullable: true
         img blank: false
     }

@@ -6,6 +6,7 @@ class MajorMap {
     String code = "Sah"
     String label = "Sahul"
     String description = ""
+
     Integer x = 0
     Integer y = 0
     Integer height = 1600
@@ -23,12 +24,14 @@ class MajorMap {
         name blank: false
         code blank: false
         label blank: false
-        description blank: false
+        description blank: true
+
         x blank: false
         y blank: false
         height blank: false
         width blank: false
         bg nullable: true
+
         isSecret nullable: false
     }
 }

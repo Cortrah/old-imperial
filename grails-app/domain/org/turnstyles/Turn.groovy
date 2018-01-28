@@ -9,7 +9,7 @@ class Turn {
     String toString() {"$name"}
 
     static belongsTo = [game: Game]
-    static hasMany = [realmTurns: RealmTurn, majorMaps: MajorMap]
+    static hasMany = [realms: Realm, majorMaps: MajorMap]
 
     static graphql = true
     static constraints = {

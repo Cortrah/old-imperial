@@ -17,8 +17,6 @@ import org.turnstyles.Region
 import org.turnstyles.Location
 import org.turnstyles.RegionBorders
 
-import org.turnstyles.RealmTurn
-
 class BootStrap {
 
     def init = { servletContext ->
@@ -132,7 +130,7 @@ class BootStrap {
                 preconditions: "always", movementType: landMv, movementEffect: adjLBCost).save()
 
 
-        TerrainType UnknownTerrainType = new TerrainType(name: "Unknown", code: "?", description: "A Mystery", landCost: null, airCost: null, navalCost: null).save()
+        TerrainType UnkTerType = new TerrainType(name: "Unknown", code: "?", description: "A Mystery", landCost: null, airCost: null, navalCost: null).save()
         TerrainType Clear = new TerrainType(name: "Clear", code: "Cl", description: "Flat terrain", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Desert = new TerrainType(name: "Desert", code: "De", landCost: 1, airCost: 1, navalCost: null).save()
         TerrainType Steppe = new TerrainType(name: "Steppe", code: "St", landCost: 1, airCost: 1, navalCost: null).save()
@@ -154,40 +152,41 @@ class BootStrap {
         Game FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
         Turn Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: FireAndIce).save()
 
-        Herald Cortrah = new Herald(name: "Cortrah", code: "C", label: "Cort").save()
-        Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
-                game: FireAndIce, herald: Cortrah).save()
 
-        Herald Kolgrim = new Herald(name: "Kolgrim", label: "Gman").save()
-        Realm DThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
-                game: FireAndIce, herald: Kolgrim).save()
+        Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
+                game: FireAndIce, turn: Turn25).save()
+        Herald Cortrah = new Herald(name: "Cortrah", code: "C", label: "Cort", realm: Kommolek).save()
+
+        Realm EThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
+                game: FireAndIce, turn: Turn25).save()
+        Herald Kolgrim = new Herald(name: "Kolgrim", label: "Gman", realm: EThace).save()
 
         MajorMap sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul", game: FireAndIce,
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 
         Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
                 hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm: Kommolek, allegiance: Homeland,
+                realm: Kommolek, allegiance: Homeland,  bordersVolcano: false,
                 kindred: WenemetKin, terrain: Clear, majorMap: sahulMap).save()
 
         Region KomRegion2 = new Region(name: "Korev", code: "Kor", label: "Korev",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
                 hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm:Kommolek, allegiance: Friendly,
+                realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
                 kindred: SaurianKin, terrain: Clear, majorMap: sahulMap).save()
 
         Region KomRegion3 = new Region(name: "Colledhu", code: "Col", label: "Colledhu",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
                 hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm:Kommolek, allegiance: Friendly,
+                realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
                 kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
 
         Region KomRegion4 = new Region(name: "Namdynn", code: "Nam", label: "Namdynn",
-                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1,
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
                 hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-                realm:Kommolek, allegiance: Friendly,
+                realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
                 kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
 
 
@@ -223,12 +222,7 @@ class BootStrap {
                 source:KomRegion3, sink:KomRegion4, borderType: majMtnBorder).save()
 
 
-        RealmTurn KomTurn25 = new RealmTurn(name: "Komolek Turn25", code: "Kom:1", notes: "not much",
-                realm: Kommolek, turn: Turn25)
-                .save()
-
         // Add Leaders
-
 
         // Leader Actions esp Movement
         // ActionCategories
@@ -251,6 +245,7 @@ class BootStrap {
 
         // Possibly merge Region and Realm TurnStatuses back into the main class to simplify them
 
+        Turn25.addToMajorMaps(sahulMap).save()
         FireAndIce.currentTurn = Turn25
 
     }

@@ -9,8 +9,17 @@ class Realm {
 
     Herald herald
 
-    static belongsTo = [game: Game]
-    static hasMany = [realmTurns: RealmTurn]
+    // LeaderActions
+    // AutoResults
+    // FinalResults
+
+    Double startingIsi = 0.0
+    Double startingTv = 0.0
+    Double endingIsi = 0.0
+    Double endingTv = 0.0
+
+    static belongsTo = [turn: Turn]
+    static hasMany = [regions: Region]
 
     static graphql = true
     static constraints = {
@@ -20,5 +29,10 @@ class Realm {
         description nullable: true
 
         herald nullable: true
+
+        startingIsi()
+        startingTv()
+        endingIsi()
+        endingTv()
     }
 }
