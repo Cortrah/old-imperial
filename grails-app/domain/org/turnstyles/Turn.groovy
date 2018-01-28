@@ -5,14 +5,15 @@ class Turn {
     Integer number = 1
     Integer startingYear = 1440
     Integer endingYear = 1445
+
     String status = "Staging"
     String chronicle = "Sahul.1440.pdf"
-
+    Date dueDate = new Date()
     String notes = "Notes"
     String toString() {"$name"}
 
     static belongsTo = [game: Game]
-    static hasMany = [realms: Realm, majorMaps: MajorMap, narratives: String]
+    static hasMany = [realms: Realm, majorMaps: MajorMap, narratives: Narrative]
 
     static graphql = true
     static constraints = {
@@ -23,5 +24,8 @@ class Turn {
 
         status inList: ["Staging", "Ploting", "Processing", "Editing", "Concluded"]
         notes blank: true
+
+        dueDate()
+        chronicle nullable: true
     }
 }

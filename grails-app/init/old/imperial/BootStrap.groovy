@@ -230,6 +230,11 @@ class BootStrap {
         // AgentTypes
 
         // Realm Details
+        // Realm Actions
+
+        // Add LeaderActions and RealmActionss to each Turn
+
+
 
         // Items
         // Units
