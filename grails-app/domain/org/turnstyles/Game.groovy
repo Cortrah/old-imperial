@@ -5,6 +5,7 @@ class Game {
     String code = "Code"
     String label = "Label"
     String notes = "Notes"
+    String status = "Staging"
     String toString() {"$name"}
 
     Turn currentTurn
@@ -15,6 +16,7 @@ class Game {
         name blank: false
         code blank: false
         label blank: false
+        status inList: ["Staging", "Ploting", "Processing", "Concluded"]
 
         currentTurn nullable: true
 

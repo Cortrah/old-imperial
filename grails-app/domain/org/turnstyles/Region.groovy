@@ -7,13 +7,12 @@ class Region {
     String name = "Name"
     String code = "Code"
     String label = "Label"
-    String description = "default description"
-    String notes = "notes"
+    String description = ""
+    String notes = ""
     String toString() {"$name"}
 
     Turn turn
     Realm realm
-    Region region
     AllegianceType allegiance
     Kindred kindred
     TerrainType terrain
@@ -57,7 +56,6 @@ class Region {
 
         turn nullable: false
         realm nullable: true
-        region nullable: false
         hasRoad nullable: false
         isSecret nullable: false
         isInimical nullable: false

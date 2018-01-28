@@ -167,8 +167,8 @@ class BootStrap {
 
         Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
                 gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
-                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
                 realm: Kommolek, allegiance: Homeland,  bordersVolcano: false,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
                 kindred: WenemetKin, terrain: Clear, majorMap: sahulMap).save()
 
         Region KomRegion2 = new Region(name: "Korev", code: "Kor", label: "Korev",
