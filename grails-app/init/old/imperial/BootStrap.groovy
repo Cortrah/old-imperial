@@ -9,7 +9,6 @@ import org.turnstyles.MovementEffect
 import org.turnstyles.MovementRule
 import org.turnstyles.MovementType
 import org.turnstyles.TerrainType
-
 import org.turnstyles.Turn
 import org.turnstyles.Realm
 import org.turnstyles.MajorMap
@@ -17,9 +16,39 @@ import org.turnstyles.Region
 import org.turnstyles.Location
 import org.turnstyles.RegionBorders
 
+import org.turnstyles.TrainingType
+import org.turnstyles.AgentType
+
 class BootStrap {
 
     def init = { servletContext ->
+
+        TrainingType gn = new TrainingType(name: "General", code: "Gn", description: "").save();
+        TrainingType wz = new TrainingType(name: "Wizard", code: "Wz", description: "").save();
+        TrainingType sc = new TrainingType(name: "Scholar", code: "Sc", description: "").save();
+        TrainingType li = new TrainingType(name: "Lich", code: "li", description: "").save();
+        TrainingType ad = new TrainingType(name: "Admiral", code: "Ad", description: "").save();
+        TrainingType am = new TrainingType(name: "Air Marshal", code: "AM", description: "").save();
+        TrainingType sp = new TrainingType(name: "Spy", code: "Spy", description: "").save();
+        TrainingType al = new TrainingType(name: "Alchemist", code: "Al", description: "").save();
+        TrainingType hi = new TrainingType(name: "Historian", code: "Hi", description: "").save();
+        TrainingType mm = new TrainingType(name: "Cartographer", code: "MM", description: "Map Maker").save();
+        TrainingType eg = new TrainingType(name: "Diplomat", code: "Di", description: "Diplomatic Envoy").save();
+        TrainingType ju = new TrainingType(name: "Jurist", code: "Ju", description: "").save();
+        TrainingType en = new TrainingType(name: "Engineer", code: "En", description: "").save();
+        TrainingType md = new TrainingType(name: "Doctor", code: "MD", description: "").save();
+        TrainingType na = new TrainingType(name: "Navigator", code: "Na", description: "").save();
+        TrainingType th = new TrainingType(name: "Theologian", code: "Th", description: "").save();
+        TrainingType vp = new TrainingType(name: "Vampire", code: "Vp", description: "").save();
+
+        AgentType F = new AgentType(name: "Friendly", code: "F", description: "").save();
+        AgentType A = new AgentType(name: "Allied", code: "A", description: "").save();
+        AgentType M = new AgentType(name: "Mercenary", code: "M", description: "").save();
+        AgentType R = new AgentType(name: "Ruler", code: "E", description: "").save();
+        AgentType H = new AgentType(name: "Heir", code: "H", description: "").save();
+        AgentType He = new AgentType(name: "Hero", code: "He", description: "").save();
+        AgentType Th = new AgentType(name: "Thrall", code: "Th", description: "").save();
+
         AllegianceType Unknown = new AllegianceType(name: "Unknown", code: "?").save()
         AllegianceType Homeland = new AllegianceType(name: "Homeland", code: "H").save()
         AllegianceType Friendly = new AllegianceType(name: "Friendly", code: "F").save()
