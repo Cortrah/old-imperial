@@ -18,10 +18,19 @@ import org.turnstyles.RegionBorders
 
 import org.turnstyles.TrainingType
 import org.turnstyles.AgentType
+import org.turnstyles.LeaderActionType
 
 class BootStrap {
 
     def init = { servletContext ->
+
+        LeaderActionType move = new LeaderActionType(name: "Movement", code: "Mv", description: "").save();
+        LeaderActionType combat = new LeaderActionType(name: "Combat", code: "Cbt", description: "").save();
+        LeaderActionType intel = new LeaderActionType(name: "Inteligence", code: "Int", description: "").save();
+        LeaderActionType diplo = new LeaderActionType(name: "Diplomacy", code: "Di", description: "").save();
+        LeaderActionType exchange = new LeaderActionType(name: "Transfer", code: "Tr", description: "").save();
+        LeaderActionType magic = new LeaderActionType(name: "Magic", code: "Ma", description: "").save();
+        LeaderActionType custom = new LeaderActionType(name: "Custom", code: "XX", description: "").save();
 
         TrainingType gn = new TrainingType(name: "General", code: "Gn", description: "").save();
         TrainingType wz = new TrainingType(name: "Wizard", code: "Wz", description: "").save();
