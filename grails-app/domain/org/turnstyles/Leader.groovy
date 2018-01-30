@@ -6,6 +6,17 @@ class Leader {
 
     String name = "Name"
     String code = "Code"
+
+    Integer carryingAp = 0
+    Integer carryingGp = 0
+    Region atRegion
+    Location atLocation
+    String notes = ""
+
+    String icon = "leader.svg"
+    Integer displayX = 0
+    Integer displayY = 0
+
     Integer command = 5
     Integer loyalty = 5
     Integer combat = 5
@@ -14,23 +25,11 @@ class Leader {
     Integer age = 18
     String sex = "M"
 
-    Integer carryingAp = 0
-    Integer carryingGp = 0
-
-    String notes = ""
-
-    String icon = "leader.svg"
-    Integer displayX = 0
-    Integer displayY = 0
-
-    Region homeRegion
-    TrainingType training
-    Kindred kindred
-    Region atRegion
-    Location atLocation
-
     AgentType agentType
     Realm realm
+    Region homeRegion
+    Kindred kindred
+    TrainingType training
 
     String toString() {"$name"}
 
@@ -38,5 +37,29 @@ class Leader {
     static constraints = {
         name blank: false
         code blank: false
+        notes blank: true
+
+        carryingAp()
+        carryingGp()
+        atRegion nullable: true
+        atLocation nullable: true
+
+        icon nullable: true
+        displayX nullable: true
+        displayY nullable: true
+
+        command nullable: false
+        loyalty nullable: false
+        combat nullable: false
+        diplomacy nullable: false
+        sorcery nullable: false
+        age nullable: false
+        sex nullable: false
+
+        agentType nullable: false
+        realm nullable: true
+        homeRegion nullable: true
+        kindred nullable: false
+        training nullable: true
     }
 }
