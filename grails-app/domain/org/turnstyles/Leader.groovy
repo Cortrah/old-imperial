@@ -11,7 +11,7 @@ class Leader {
     Integer carryingGp = 0
     Region atRegion
     Location atLocation
-    String notes = ""
+    String notes = "notes"
 
     String icon = "leader.svg"
     Integer displayX = 0

@@ -36,17 +36,46 @@ class LeaderAction {
     // item
     // ItemType
     // effect
-    // default results
-    // final results
+
+    String defaultResults = ""
+    String finalResults = ""
 
     MovementType movementType
 
-    // String monitorLevel = "Normal"
+    String monitorLevel = "Normal"
 
     static graphql = true
     static constraints = {
         name blank: false
         code blank: false
         description nullable: true
+
+        gpCost nullable: false
+        apCost nullable: false
+        nfpCost nullable: false
+        sfpCost nullable: false
+        manaCost nullable: false
+        totalManaCost nullable: false
+        movementCost nullable: false
+
+        leaderActionType nullable: false
+
+        region nullable: true
+        atLocation nullable: true
+        toLocation nullable: true
+        otherLocation nullable: true
+
+        usingRoad nullable: false
+        startingPhase nullable: false
+
+        isSecret nullable: false
+        isWithOthers nullable: false
+        isPrimaryTarget nullable: true
+
+        movementType nullable: true
+        monitorLevel inList: ["Fine", "Check", "Wierd", "Error"]
+
+        defaultResults blank: true
+        finalResults blank: true
     }
 }
