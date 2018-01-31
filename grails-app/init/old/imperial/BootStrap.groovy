@@ -20,9 +20,16 @@ import org.turnstyles.TrainingType
 import org.turnstyles.AgentType
 import org.turnstyles.LeaderActionType
 
+import org.turnstyles.Religion
+
 class BootStrap {
 
     def init = { servletContext ->
+
+        Religion yagnarist = new Religion(name: "Yagnar: the Cleansing Storm", code: "Y", label: "Yagnar", description: "description").save();
+        Religion illuvarian = new Religion(name: "Illuvar: Justice and Light", code: "I", label: "Illuvar", description: "description").save();
+        Religion tarotist = new Religion(name: "Lords of the Tarot: Fate and Fortune", code: "T", label: "Tarot", description: "description").save();
+        Religion urdan = new Religion(name: "Urda: The Earth Mother", code: "U", label: "Urda", description: "description").save();
 
         LeaderActionType move = new LeaderActionType(name: "Movement", code: "Mv", description: "").save();
         LeaderActionType combat = new LeaderActionType(name: "Combat", code: "Cbt", description: "").save();

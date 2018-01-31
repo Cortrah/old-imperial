@@ -1,14 +1,16 @@
 package org.turnstyles
 
 class Herald {
-    String name = "Herald Name"
-    String code = "H"
-    String label = "Herald"
+    String name = "Name"
+    String code = "Code"
+    String label = "Label"
     String description = "default description"
     String img = "default.png"
     String toString() {"$name"}
 
     static belongsTo = [realm: Realm]
+
+    Boolean isSecret = false
 
     static graphql = true
     static constraints = {
@@ -18,5 +20,6 @@ class Herald {
         realm nullable: false
         description nullable: true
         img blank: false
+        isSecret nullable: false
     }
 }
