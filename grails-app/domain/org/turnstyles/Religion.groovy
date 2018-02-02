@@ -10,8 +10,6 @@ class Religion {
     String icon = "icon.png"
     Boolean isSecret = false
 
-    static belongsTo = [realm: Realm]
-
     String toString() {"$name"}
 
     static graphql = true
@@ -19,7 +17,6 @@ class Religion {
         name blank: false
         code blank: false
         label blank: false
-        realm nullable: false
 
         description nullable: true
         symbol blank: false
