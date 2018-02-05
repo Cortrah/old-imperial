@@ -17,6 +17,14 @@ class Region {
     Kindred kindred
     TerrainType terrain
 
+    // Religion
+    // PlagueStatus
+    // CorruptionStatus
+    // Other Status?
+
+    // Features
+    // Constructs
+
     Double gp = 0.0
     Double ap = 0.0
     Double nfp = 0.0

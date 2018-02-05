@@ -14,10 +14,12 @@ class Kindred {
     Integer averageLifespan = 6
     Integer averageeLoyalty = 6
 
-    Boolean isAmphibian = false
-    Boolean isFlyer = false
-    Boolean isArmored = false
-    Boolean isVacumeProtected = false
+    // Replacing these with hasMany KindredTraits
+    // Boolean isAmphibian = false
+    // Boolean isFlyer = false
+    // Boolean isArmored = false
+    // Boolean isVacumeProtected = false
+
     Boolean isSecret = false
 
     String toString() {"$name"}
@@ -37,10 +39,11 @@ class Kindred {
         averageLifespan nullable: false
         averageeLoyalty nullable: false
 
-        isAmphibian nullable: false
-        isFlyer nullable: false
-        isArmored nullable: false
-        isVacumeProtected nullable: false
+        // isAmphibian nullable: false
+        // isFlyer nullable: false
+        // isArmored nullable: false
+        // isVacumeProtected nullable: false
+
         isSecret nullable: false
     }
 }

@@ -10,6 +10,9 @@ class Herald {
 
     static belongsTo = [realm: Realm]
 
+    // Should link to a player, which is a spring security user that also has
+    // Credits & Games
+
     Boolean isSecret = false
 
     static graphql = true
