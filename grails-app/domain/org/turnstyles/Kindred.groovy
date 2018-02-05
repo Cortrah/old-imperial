@@ -14,7 +14,7 @@ class Kindred {
     Integer averageLifespan = 6
     Integer averageeLoyalty = 6
 
-    // Replacing these with hasMany KindredTraits
+    // ToDo: Replace these with hasMany KindredTraits
     // Boolean isAmphibian = false
     // Boolean isFlyer = false
     // Boolean isArmored = false

@@ -1,5 +1,13 @@
 package org.turnstyles
 
+// ToDo: Add Calculations for
+// nav, air, qr
+// hostile
+// inimical
+// hasted
+// spell
+// mixed ?
+
 class MovementEffect {
     String name = "name"
     String code = 'code'
@@ -7,6 +15,10 @@ class MovementEffect {
     String toString() {"$name"}
 
     MovementType movementType
+
+    // Conditions
+    // MovementRule
+    // Effect
 
     String targetType = "cost"
     String operator = "+"
