@@ -10,6 +10,8 @@ class Religion {
     String icon = "icon.png"
     Boolean isSecret = false
 
+    static hasMany = [spellTypes :SpellType]
+
     String toString() {"$name"}
 
     static graphql = true
