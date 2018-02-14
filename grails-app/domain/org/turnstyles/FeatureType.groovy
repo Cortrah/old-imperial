@@ -7,7 +7,6 @@ class FeatureType {
     String name = "Name"
     String code = "Code"
     String description = ""
-    String icon = "feature.svg"
 
     String toString() {"$name"}
 
@@ -16,9 +15,5 @@ class FeatureType {
         name blank: false
         code blank: false
         description nullable: true
-        icon nullable: true
-        x()
-        y()
-        isSecret()
     }
 }
