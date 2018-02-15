@@ -1,13 +1,21 @@
 package org.turnstyles
 
+// movementType speed, reactionspeed,  cargo capacity, cargo cost
+// where the effect is the number?
+
 class MovementRule {
     String name = "name"
     String code = 'code'
     String description = "movement rule"
-    String toString() {"$name $movementType $movementEffect"}
 
-    String preconditions
+    String toString() {"$name"}
+
+    String preconditions = ""
     MovementType movementType
+    Integer speed = 0
+    Integer reactionSpeed = 0
+    Double cargoCost = 0
+    Double cargoCapacity = 0
     MovementEffect movementEffect
 
     static graphql = true
@@ -19,6 +27,10 @@ class MovementRule {
         preconditions nullable: true
 
         movementType nullable: true
+        speed()
+        reactionSpeed()
+        cargoCapacity()
+        cargoCost()
         movementEffect nullable: true
     }
 }

@@ -1,15 +1,14 @@
 package org.turnstyles
 
-//Integer landMove = 0
-//Integer airMove = 0
-//Integer navalMove = 0
-//Integer undergroundMove = 0
-//Integer gateMove = 0
+class Cargo {
 
-class MovementType {
     String name = "Name"
-    String code = 'Code'
-    String description = "description"
+    String code = "Code"
+    String description = ""
+
+    ResourceType resourceType
+    Integer amount
+
     String toString() {"$name"}
 
     static graphql = true
@@ -17,5 +16,8 @@ class MovementType {
         name blank: false
         code blank: false
         description nullable: true
+
+        resourceType()
+        amount()
     }
 }

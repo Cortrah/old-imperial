@@ -1,15 +1,13 @@
 package org.turnstyles
 
-//Integer landMove = 0
-//Integer airMove = 0
-//Integer navalMove = 0
-//Integer undergroundMove = 0
-//Integer gateMove = 0
+// Nsr, Bl, Ir, Rs, Cav, Inf, Sge, Nav, Air, Cel, (Rugby, Shinty ...)
 
-class MovementType {
+class QualityRatingType {
+
     String name = "Name"
-    String code = 'Code'
-    String description = "description"
+    String code = "Code"
+    String description = ""
+
     String toString() {"$name"}
 
     static graphql = true

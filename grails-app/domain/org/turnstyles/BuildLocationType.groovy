@@ -1,15 +1,15 @@
 package org.turnstyles
 
-//Integer landMove = 0
-//Integer airMove = 0
-//Integer navalMove = 0
-//Integer undergroundMove = 0
-//Integer gateMove = 0
+// Controlled Region, Homeland, Town City, Port, Fortress,
+// Controlled Forest, Controlled Swamp, Controlled Jungle,
+// Gryphon Nest, ElephantRange
 
-class MovementType {
+class BuildLocationType {
+
     String name = "Name"
-    String code = 'Code'
-    String description = "description"
+    String code = "Code"
+    String description = ""
+
     String toString() {"$name"}
 
     static graphql = true
