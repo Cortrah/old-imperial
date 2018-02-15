@@ -1,15 +1,10 @@
 package org.turnstyles
 
-// gp, ap, nfp, sfp, mana, blankSpellCrystal
-
-class Cost {
+class Effect {
 
     String name = "Name"
     String code = "Code"
     String description = ""
-
-    ResourceType resourceType
-    Integer amount
 
     String toString() {"$name"}
 
@@ -18,8 +13,5 @@ class Cost {
         name blank: false
         code blank: false
         description nullable: true
-
-        resourceType()
-        amount()
     }
 }
