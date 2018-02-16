@@ -1,7 +1,5 @@
 package org.turnstyles
 
-
-
 class Location {
 
     String name = "Region:Co"
@@ -11,7 +9,8 @@ class Location {
 
     boolean isSecret = false;
 
-    static belongsTo = [region: Region]
+    static belongsTo = [region :Region]
+    static hasMany = [items :Item, unitTypeGroups :UnitTypeGroup, leaders :Leader]
 
     static graphql = true
     static constraints = {

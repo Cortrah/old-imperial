@@ -1,7 +1,5 @@
 package org.turnstyles
 
-import org.grails.datastore.mapping.query.Query
-
 class Leader {
 
     String name = "Name"
@@ -30,6 +28,8 @@ class Leader {
     Region homeRegion
     Kindred kindred
     TrainingType training
+
+    static hasMany = [items :Item, unitTypeGroups :UnitTypeGroup]
 
     String toString() {"$name"}
 

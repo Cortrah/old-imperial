@@ -9,6 +9,9 @@ class UnitTypeGroup {
     UnitType unitType
     Integer amount
 
+    // cargoCapacity can be computed from unitTypes for each movementType
+    // cargoUnits can be used to compute the cargo units used and remaining cargo capacity
+
     static hasMany = [cargoUnits :Cargo]
 
     Realm realm
