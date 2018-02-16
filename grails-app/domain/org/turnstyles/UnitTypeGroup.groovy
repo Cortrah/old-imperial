@@ -9,7 +9,7 @@ class UnitTypeGroup {
     UnitType unitType
     Integer amount
 
-    static hasMany = [cargoCarried :Cargo]
+    static hasMany = [cargoUnits :Cargo]
 
     Realm realm
     Region homeRegion

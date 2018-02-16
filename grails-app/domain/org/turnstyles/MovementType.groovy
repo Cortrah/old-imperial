@@ -1,10 +1,10 @@
 package org.turnstyles
 
-//Integer landMove = 0
-//Integer airMove = 0
-//Integer navalMove = 0
-//Integer undergroundMove = 0
-//Integer gateMove = 0
+// land = 0
+// air = 0
+// naval = 0
+// underground = 0
+// spell = 0 (teleport or gate) different?
 
 class MovementType {
     String name = "Name"

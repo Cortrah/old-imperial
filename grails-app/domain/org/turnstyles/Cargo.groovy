@@ -8,6 +8,7 @@ class Cargo {
 
     ResourceType resourceType
     Integer amount
+    Double spaceRequired
 
     String toString() {"$name"}
 
@@ -19,5 +20,6 @@ class Cargo {
 
         resourceType()
         amount()
+        spaceRequired()
     }
 }

@@ -6,8 +6,10 @@ class ItemType {
     String code = "Code"
     String description = ""
 
-    // spell crystals have a blank crystal as a cost
+    // ex spell crystals have a blank crystal as a cost
     static hasMany = [costs :Cost, effects :Effect]
+
+    Double cargoSpace = 0
 
     // maybe a more generic Effects with a spell type and amount
     SpellType spellType

@@ -1,6 +1,7 @@
 package org.turnstyles
 
 // usually instances of an itemType like a spell crystal, but can be a unique typeless item as well
+// is cargo a type of cost? or it's own thing?
 class Item {
 
     String name = "Name"
@@ -18,6 +19,5 @@ class Item {
         code blank: false
         description nullable: true
         itemType nullable: true
-
     }
 }
