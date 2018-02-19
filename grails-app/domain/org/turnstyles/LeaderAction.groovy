@@ -1,7 +1,5 @@
 package org.turnstyles
 
-import org.grails.datastore.mapping.query.Query
-
 class LeaderAction {
 
     String name = "Name"
@@ -15,6 +13,8 @@ class LeaderAction {
     Integer sfpCost = 0
     Integer manaCost = 0
     Integer totalManaCost = 0
+
+    // how to deal with movement costs of a turn or more? just 25, 50, etc?
     Integer movementCost = 0
 
     LeaderActionType leaderActionType
@@ -42,7 +42,7 @@ class LeaderAction {
 
     MovementType movementType
 
-    String monitorLevel = "Normal"
+    String monitorLevel = "Probably Fine"
 
     static graphql = true
     static constraints = {
@@ -73,7 +73,7 @@ class LeaderAction {
         isPrimaryTarget nullable: true
 
         movementType nullable: true
-        monitorLevel inList: ["Fine", "Check", "Wierd", "Error"]
+        monitorLevel inList: ["Probably Fine", "Check", "Wierd", "Probable Error"]
 
         defaultResults blank: true
         finalResults blank: true

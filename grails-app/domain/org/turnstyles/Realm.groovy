@@ -75,7 +75,7 @@ class Realm {
     // AutoResults
 
     static belongsTo = [turn: Turn]
-    static hasMany = [regions: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement]
+    static hasMany = [regions: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement, turnActions :RealmAction]
 
     static graphql = true
     static constraints = {

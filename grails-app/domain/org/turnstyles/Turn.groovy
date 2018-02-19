@@ -13,6 +13,10 @@ class Turn {
     String toString() {"$name"}
 
     static belongsTo = [game: Game]
+
+    // Realm is kind of Both Realm and RealmsTurnStatus here as it is a new row for every turn
+    // this is to encompass possible changes to everything
+    // from the realms name to each turns realm status to each turns set of realm actions
     static hasMany = [realms: Realm, majorMaps: MajorMap, narratives: Narrative]
 
     static graphql = true
