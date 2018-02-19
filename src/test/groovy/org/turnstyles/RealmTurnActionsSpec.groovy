@@ -3,7 +3,7 @@ package org.turnstyles
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class RegionsFeatureSpec extends Specification implements DomainUnitTest<RegionsFeature> {
+class RealmTurnActionsSpec extends Specification implements DomainUnitTest<RealmTurnActions> {
 
     def setup() {
     }

@@ -10,6 +10,8 @@ class BuildLocationType {
     String code = "Code"
     String description = ""
 
+    Boolean isSecret = false
+
     String toString() {"$name"}
 
     static graphql = true
@@ -17,5 +19,6 @@ class BuildLocationType {
         name blank: false
         code blank: false
         description nullable: true
+        isSecret nullable: false
     }
 }

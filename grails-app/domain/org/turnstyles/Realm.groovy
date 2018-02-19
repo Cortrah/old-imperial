@@ -16,8 +16,8 @@ class Realm {
 
     Location captialLocation
     Region homeRegion
+    Religion religon
     // RealmType
-    // Religion religon
 
     Double startingIsi = 0.0
     Double startingTv = 0.0

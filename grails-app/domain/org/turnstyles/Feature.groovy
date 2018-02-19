@@ -12,7 +12,7 @@ class Feature {
 
     Boolean isSecret = true
 
-    Realm realm
+    Realm realmsecret
     Region region
     Location location
 

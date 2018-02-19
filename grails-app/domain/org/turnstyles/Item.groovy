@@ -11,6 +11,8 @@ class Item {
     ItemType itemType
     static hasMany = [costs :Cost, effects :Effect]
 
+    Boolean isSecret = false
+
     String toString() {"$name"}
 
     static graphql = true
@@ -19,5 +21,6 @@ class Item {
         code blank: false
         description nullable: true
         itemType nullable: true
+        isSecret nullable: false
     }
 }

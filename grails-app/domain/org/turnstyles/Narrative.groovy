@@ -8,11 +8,14 @@ class Narrative {
     String playByPlay = ""
     String episode = ""
 
+    Boolean isSecret = false
+
     static constraints = {
         name nullable: true
         code nullable: true
         notes nullable: true
         playByPlay nullable: true
         episode nullable: true
+        isSecret nullable: false
     }
 }
