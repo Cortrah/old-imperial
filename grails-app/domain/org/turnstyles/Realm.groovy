@@ -17,7 +17,7 @@ class Realm {
     Location captialLocation
     Region homeRegion
     Religion religon
-    // RealmType
+    RealmType realmType
 
     Double startingIsi = 0.0
     Double startingTv = 0.0
@@ -62,17 +62,12 @@ class Realm {
 
     String realmNotes = "Notes"
 
-    // LeaderActions
-    // FinalResults
-
     // ------------
     // Dei
     // ------------
     Integer corruptionPercentage = 0
     Integer plaguePercentage = 0
     String deiNotes = "Dei Notes"
-
-    // AutoResults
 
     static belongsTo = [turn: Turn]
     static hasMany = [regions: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement, turnActions :RealmAction,
@@ -81,7 +76,8 @@ class Realm {
                       hiddenRegions: Region, hiddenRegionBorders: RegionBorders, hiddenFeatures: Feature,
                       hiddenHeralds: Herald, hiddenItems: Item, hiddenKindred: Kindred, hiddenReligions: Religion,
                       hiddenSpelltype: SpellType, hiddenUnitType: UnitType, hiddenBuildLocationType: BuildLocationType,
-                      hiddenLeaders: Leader, hiddenUnitTypeGroups: UnitTypeGroup]
+                      hiddenLeaders: Leader, hiddenUnitTypeGroups: UnitTypeGroup,
+                      leaderActions: LeaderAction, realmActions: RealmAction, narratives: Narrative]
 
     static graphql = true
     static constraints = {
