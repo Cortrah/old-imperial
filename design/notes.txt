@@ -1,0 +1,21 @@
+There is public by default, secret by default and magi
+
+For Each turn for Each Realm
+we have different secret
+
+hiddenRealms
+hiddenMajorMaps
+hiddenNarratives
+etc...
+
+realms, majormaps, narratives
+
+constructs, locations, minormaps,
+regions, regionsborders, features
+heralds, items, kindred, religions
+spelltype, unittype BuildLocationType
+
+everything else remains secret by default,
+but what about allied leaders, units and unitytpegroups?
+how do they exchange and coordinate if they cant see each other? For that we probably need to add those. But leave those for round2
+
