@@ -19,6 +19,6 @@ class AgentType {
     static constraints = {
         name blank: false
         code blank: false
-        description nullable: true
+        description nullable: true, widget: 'textarea'
     }
 }
