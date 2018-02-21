@@ -1,5 +1,8 @@
 package org.turnstyles
 
+// common items of which there may be many instances
+// ToDo: is cargo a type of cost? or it's own thing?
+
 class ItemType {
 
     String name = "Name"

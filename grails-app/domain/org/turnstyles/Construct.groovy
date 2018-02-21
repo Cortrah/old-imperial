@@ -1,5 +1,7 @@
 package org.turnstyles
 
+// an instance of a ConstructType with a level, investment and production values which vary by instance
+
 class Construct {
 
     String name = "Name"

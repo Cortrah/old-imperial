@@ -267,34 +267,6 @@ class BootStrap {
                 source:KomRegion3, sink:KomRegion4, borderType: majMtnBorder).save()
 
 
-        // Add Leaders
-
-        // Leader Actions esp Movement
-        // ActionCategories
-        // TrainingTypes
-        // AgentTypes
-
-        // Realm Details
-        // Realm Actions
-
-        // Add LeaderActions and RealmActionss to each Turn
-
-
-
-        // Items
-        // Units
-        // Leaders Items
-        // Leaders UnitTypeGroups
-        // Locations Items
-        // Locations UnitTypeGroups
-        // UnitTypes
-
-        // Spells
-        // Features
-        // Constructs
-
-        // Possibly merge Region and Realm TurnStatuses back into the main class to simplify them
-
         Turn25.addToMajorMaps(sahulMap).save()
         FireAndIce.currentTurn = Turn25
 

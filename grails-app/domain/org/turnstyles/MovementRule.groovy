@@ -3,6 +3,10 @@ package org.turnstyles
 // movementType speed, reactionspeed,  cargo capacity, cargo cost
 // where the effect is the number?
 
+// MovementRule movementRule = new MovementRule(
+//        name: "Adj L Border", code: "AdjLB", description: "Going into an adjacent land region",
+//        preconditions: "always", movementType: landMv, movementEffect: adjLBCost).save()
+
 class MovementRule {
     String name = "name"
     String code = 'code'

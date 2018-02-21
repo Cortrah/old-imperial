@@ -1,5 +1,7 @@
 package org.turnstyles
 
+// the opposite of a cost,
+// regions and constructs produce
 // gp, ap, nfp, sfp, mana
 
 class Product {

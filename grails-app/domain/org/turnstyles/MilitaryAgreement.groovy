@@ -1,5 +1,7 @@
 package org.turnstyles
 
+// ToDo: add effects for sharing markers or leader item or troop visibility
+
 class MilitaryAgreement {
     String name = "MilitaryAgreement"
     String code = "NH"

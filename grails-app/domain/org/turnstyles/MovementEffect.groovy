@@ -7,6 +7,15 @@ package org.turnstyles
 // hasted
 // spell
 // mixed ?
+//
+// ToDo: add sharing info in bulk or by instance to generic effect
+//
+//MovementEffect adjLBCost = new MovementEffect(
+//        name: "Adjacent Land Border Cost", code: "adj", movementType: landMv,
+//        description: "The cost for moving across an adjacent land border",
+//        targetType: "cost", operator: "+", ammount:0).save()
+
+
 
 class MovementEffect {
     String name = "name"

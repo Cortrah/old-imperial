@@ -1,5 +1,8 @@
 package org.turnstyles
 
+// a spell
+// ToDo: add proposal, research costs and history or status of completion
+
 class SpellType {
 
     String name = "Name"

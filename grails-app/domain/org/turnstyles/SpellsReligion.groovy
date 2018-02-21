@@ -1,5 +1,7 @@
 package org.turnstyles
 
+// simple relation, perhaps spells have many religions
+
 class SpellsReligion {
 
     SpellType spellType

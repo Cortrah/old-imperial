@@ -1,6 +1,6 @@
 package org.turnstyles
 
-import org.grails.datastore.mapping.query.Query
+// ToDo: import data
 
 class MinorMap {
 

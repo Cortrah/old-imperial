@@ -1,5 +1,6 @@
 package org.turnstyles
 
+// ToDo: sharing mechanism like military or economic deal
 // This version allows sharing of freeform markers amongst groups of realms and is meant for annotation and planning
 // it is multiturn but does not include phase data yet like cartographer did
 // perhaps add drawing tools

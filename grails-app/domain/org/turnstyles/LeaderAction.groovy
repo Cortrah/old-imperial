@@ -7,6 +7,7 @@ class LeaderAction {
     String description = ""
     String toString() {"$name"}
 
+    // replace with hasmany costs?
     Integer gpCost = 0
     Integer apCost = 0
     Integer nfpCost = 0

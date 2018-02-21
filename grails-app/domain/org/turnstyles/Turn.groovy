@@ -1,5 +1,8 @@
 package org.turnstyles
 
+// Turn Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: FireAndIce).save()
+// Turn25.addToMajorMaps(sahulMap).save()
+
 class Turn {
     String name = "1440-1445"
     Integer number = 1

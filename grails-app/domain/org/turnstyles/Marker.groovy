@@ -1,5 +1,8 @@
 package org.turnstyles
 
+// a freeform annotation that can be shared with other realms
+// ToDo: sharing mechanism like military or economic deal
+
 class Marker {
     String name = "Name"
     String code = "Code"

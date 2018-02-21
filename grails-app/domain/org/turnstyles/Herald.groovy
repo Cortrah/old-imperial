@@ -1,5 +1,8 @@
 package org.turnstyles
 
+// Cortrah = new org.turnstyles.Herald(name: "Cortrah", code: "C", label: "Cort", realm: Kommolek).save()
+// Kolgrim = new Herald(name: "Kolgrim", label: "Gman", realm: EThace).save()
+
 class Herald {
     String name = "Name"
     String code = "Code"

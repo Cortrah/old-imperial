@@ -1,5 +1,7 @@
 package org.turnstyles
 
+// ToDo: import data
+
 class UnitType {
 
     String name = "Name"

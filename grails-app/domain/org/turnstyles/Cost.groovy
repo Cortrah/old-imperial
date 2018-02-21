@@ -1,6 +1,7 @@
 package org.turnstyles
 
 // gp, ap, nfp, sfp, mana, blankSpellCrystal
+// totalManaCost for multi caster or per unit spell
 
 class Cost {
 
