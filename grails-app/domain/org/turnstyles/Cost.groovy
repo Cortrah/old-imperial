@@ -23,4 +23,7 @@ class Cost {
         resourceType()
         amount()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

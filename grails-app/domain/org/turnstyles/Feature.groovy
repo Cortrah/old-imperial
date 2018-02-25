@@ -15,7 +15,7 @@ class Feature {
 
     Boolean isSecret = true
 
-    Realm realmsecret
+    Realm realm
     Region region
     Location location
 
@@ -41,5 +41,8 @@ class Feature {
         location nullable: true
 
         featureType nullable: true
+    }
+    def seedContext (servletContext) {
+        //servletContext.r =
     }
 }

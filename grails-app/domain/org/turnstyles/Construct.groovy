@@ -32,7 +32,7 @@ class Construct {
 
     Integer cityForts = 0
 
-    String toString() {"$name"}
+    String toString() { "$name" }
 
     static graphql = true
     static constraints = {
@@ -62,5 +62,9 @@ class Construct {
 
         cityForts nullable: true
 
+    }
+
+    def seedContext(servletContext) {
+        //servletContext.r =
     }
 }

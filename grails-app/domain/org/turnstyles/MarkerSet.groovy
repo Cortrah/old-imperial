@@ -26,4 +26,8 @@ class MarkerSet {
         color()
         isVisible()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

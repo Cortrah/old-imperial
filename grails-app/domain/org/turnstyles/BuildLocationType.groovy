@@ -21,4 +21,7 @@ class BuildLocationType {
         description nullable: true
         isSecret nullable: false
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

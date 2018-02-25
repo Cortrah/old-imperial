@@ -1,16 +1,5 @@
 package org.turnstyles
 
-//Kindred UnknownKin = new Kindred(name: "Unknown", code: "?").save()
-//Kindred SaurianKin = new Kindred(name: "Saurian", code: "S").save()
-//Kindred YaminionKin = new Kindred(name: "Yaminion", code: "Y").save()
-//Kindred WenemetKin = new Kindred(name: "Wenemet", code: "W").save()
-//Kindred MalebolgeKin = new Kindred(name: "Malebolge", code: "M").save()
-//Kindred HumanKin = new Kindred(name: "Human", code: "H").save()
-//Kindred ElvenKin = new Kindred(name: "Elven", code: "E").save()
-//Kindred ThalariKin = new Kindred(name: "Thalari", code: "T").save()
-//Kindred GornyaKin = new Kindred(name: "Gornya", code: "G").save()
-//Kindred MixedKin = new Kindred(name: "Mixed", code: "X").save()
-
 class Kindred {
     String name = "Name"
     String code = "Code"
@@ -56,5 +45,18 @@ class Kindred {
         // isVacumeProtected nullable: false
 
         isSecret nullable: false
+    }
+    def seedContext (servletContext) {
+        //servletContext.r =
+        //Kindred UnknownKin = new Kindred(name: "Unknown", code: "?").save()
+        //Kindred SaurianKin = new Kindred(name: "Saurian", code: "S").save()
+        //Kindred YaminionKin = new Kindred(name: "Yaminion", code: "Y").save()
+        //Kindred WenemetKin = new Kindred(name: "Wenemet", code: "W").save()
+        //Kindred MalebolgeKin = new Kindred(name: "Malebolge", code: "M").save()
+        //Kindred HumanKin = new Kindred(name: "Human", code: "H").save()
+        //Kindred ElvenKin = new Kindred(name: "Elven", code: "E").save()
+        //Kindred ThalariKin = new Kindred(name: "Thalari", code: "T").save()
+        //Kindred GornyaKin = new Kindred(name: "Gornya", code: "G").save()
+        //Kindred MixedKin = new Kindred(name: "Mixed", code: "X").save()
     }
 }

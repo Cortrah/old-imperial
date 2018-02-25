@@ -14,4 +14,8 @@ class Province {
         code blank: false
         description nullable: true
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

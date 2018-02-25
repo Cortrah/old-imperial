@@ -20,4 +20,7 @@ class ResourceType {
 
         cargoCost()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

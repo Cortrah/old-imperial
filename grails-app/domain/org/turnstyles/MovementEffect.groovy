@@ -9,11 +9,6 @@ package org.turnstyles
 // mixed ?
 //
 // ToDo: add sharing info in bulk or by instance to generic effect
-//
-//MovementEffect adjLBCost = new MovementEffect(
-//        name: "Adjacent Land Border Cost", code: "adj", movementType: landMv,
-//        description: "The cost for moving across an adjacent land border",
-//        targetType: "cost", operator: "+", ammount:0).save()
 
 
 
@@ -45,5 +40,12 @@ class MovementEffect {
         targetType inList: ['row', 'cost', 'benefit']
         operator inList: ['+', '-', '*']
         amount()
+    }
+    def seedContext (servletContext) {
+        //servletContext.r =
+        //MovementEffect adjLBCost = new MovementEffect(
+        //        name: "Adjacent Land Border Cost", code: "adj", movementType: landMv,
+        //        description: "The cost for moving across an adjacent land border",
+        //        targetType: "cost", operator: "+", ammount:0).save()
     }
 }

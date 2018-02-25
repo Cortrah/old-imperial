@@ -31,4 +31,7 @@ class ItemType {
         manaCharge nullable: true
         spellType nullable: true
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

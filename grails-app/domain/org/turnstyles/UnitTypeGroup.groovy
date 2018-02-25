@@ -28,4 +28,8 @@ class UnitTypeGroup {
         unitType()
         amount()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

@@ -29,4 +29,8 @@ class Marker {
         description nullable: true
         tooltip nullable: true
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

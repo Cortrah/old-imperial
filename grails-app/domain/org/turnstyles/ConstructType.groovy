@@ -61,4 +61,7 @@ class ConstructType {
         cityForts nullable: true
 
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

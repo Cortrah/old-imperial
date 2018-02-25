@@ -12,4 +12,8 @@ class SpellsReligion {
     static graphql = true
     static constraints = {
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

@@ -41,4 +41,9 @@ class UnitType {
         isAllied()
         isSecret()
     }
+
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

@@ -26,4 +26,7 @@ class TradeAgreement {
         initiatingRealm()
         acceptingRealm()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

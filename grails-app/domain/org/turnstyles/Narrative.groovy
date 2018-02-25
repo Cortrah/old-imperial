@@ -23,4 +23,8 @@ class Narrative {
         episode nullable: true
         isSecret nullable: false
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

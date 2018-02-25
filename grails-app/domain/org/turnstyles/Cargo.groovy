@@ -25,4 +25,7 @@ class Cargo {
         amount()
         spaceRequired()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

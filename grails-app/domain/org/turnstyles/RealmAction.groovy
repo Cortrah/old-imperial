@@ -60,4 +60,8 @@ class RealmAction {
 
     static constraints = {
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

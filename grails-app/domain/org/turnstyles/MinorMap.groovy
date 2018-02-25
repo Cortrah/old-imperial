@@ -25,4 +25,7 @@ class MinorMap {
         y()
         isSecret()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

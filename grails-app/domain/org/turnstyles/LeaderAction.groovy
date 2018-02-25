@@ -79,4 +79,7 @@ class LeaderAction {
         defaultResults blank: true
         finalResults blank: true
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

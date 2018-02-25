@@ -46,4 +46,8 @@ class SpellType {
 
         isSecret()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

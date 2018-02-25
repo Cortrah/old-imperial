@@ -1,13 +1,5 @@
 package org.turnstyles
 
-//LeaderActionType move = new LeaderActionType(name: "Movement", code: "Mv", description: "").save();
-//LeaderActionType combat = new LeaderActionType(name: "Combat", code: "Cbt", description: "").save();
-//LeaderActionType intel = new LeaderActionType(name: "Inteligence", code: "Int", description: "").save();
-//LeaderActionType diplo = new LeaderActionType(name: "Diplomacy", code: "Di", description: "").save();
-//LeaderActionType exchange = new LeaderActionType(name: "Transfer", code: "Tr", description: "").save();
-//LeaderActionType magic = new LeaderActionType(name: "Magic", code: "Ma", description: "").save();
-//LeaderActionType custom = new LeaderActionType(name: "Custom", code: "XX", description: "").save();
-
 class LeaderActionType {
 
     String name = "Name"
@@ -21,4 +13,15 @@ class LeaderActionType {
         code blank: false
         description nullable: true
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+        //LeaderActionType move = new LeaderActionType(name: "Movement", code: "Mv", description: "").save();
+        //LeaderActionType combat = new LeaderActionType(name: "Combat", code: "Cbt", description: "").save();
+        //LeaderActionType intel = new LeaderActionType(name: "Inteligence", code: "Int", description: "").save();
+        //LeaderActionType diplo = new LeaderActionType(name: "Diplomacy", code: "Di", description: "").save();
+        //LeaderActionType exchange = new LeaderActionType(name: "Transfer", code: "Tr", description: "").save();
+        //LeaderActionType magic = new LeaderActionType(name: "Magic", code: "Ma", description: "").save();
+        //LeaderActionType custom = new LeaderActionType(name: "Custom", code: "XX", description: "").save();
+    }
 }
+

@@ -62,4 +62,7 @@ class Leader {
         kindred nullable: false
         training nullable: true
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

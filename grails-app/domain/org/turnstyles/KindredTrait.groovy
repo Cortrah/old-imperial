@@ -24,4 +24,7 @@ class KindredTrait {
         label blank: false
         cost nullable: false
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }

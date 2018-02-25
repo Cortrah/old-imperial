@@ -23,4 +23,8 @@ class MilitaryAgreement {
         initiatingRealm()
         acceptingRealm()
     }
+    def seedContext (servletContext) {
+        //servletContext.r =
+    }
 }
+

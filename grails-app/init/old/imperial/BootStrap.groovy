@@ -26,10 +26,8 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        Religion yagnarist = new Religion(name: "Yagnar: the Cleansing Storm", code: "Y", label: "Yagnar", description: "description").save();
-        Religion illuvarian = new Religion(name: "Illuvar: Justice and Light", code: "I", label: "Illuvar", description: "description").save();
-        Religion tarotist = new Religion(name: "Lords of the Tarot: Fate and Fortune", code: "T", label: "Tarot", description: "description").save();
-        Religion urdan = new Religion(name: "Urda: The Earth Mother", code: "U", label: "Urda", description: "description").save();
+        Religion defaultReligion = new Religion().save();
+        defaultReligion.seedContext(servletContext);
 
         LeaderActionType move = new LeaderActionType(name: "Movement", code: "Mv", description: "").save();
         LeaderActionType combat = new LeaderActionType(name: "Combat", code: "Cbt", description: "").save();
@@ -57,13 +55,13 @@ class BootStrap {
         TrainingType th = new TrainingType(name: "Theologian", code: "Th", description: "").save();
         TrainingType vp = new TrainingType(name: "Vampire", code: "Vp", description: "").save();
 
-        AgentType F = new AgentType(name: "Friendly", code: "F", description: "").save();
-        AgentType A = new AgentType(name: "Allied", code: "A", description: "").save();
-        AgentType M = new AgentType(name: "Mercenary", code: "M", description: "").save();
-        AgentType R = new AgentType(name: "Ruler", code: "E", description: "").save();
-        AgentType H = new AgentType(name: "Heir", code: "H", description: "").save();
-        AgentType He = new AgentType(name: "Hero", code: "He", description: "").save();
-        AgentType Th = new AgentType(name: "Thrall", code: "Th", description: "").save();
+        AgentType F = new AgentType(name: "Friendly", code: "F", description: "A loyal agent of empire").save();
+        AgentType A = new AgentType(name: "Allied", code: "A", description: "An agent of an allied region").save();
+        AgentType M = new AgentType(name: "Mercenary", code: "M", description: "A hired agent").save();
+        AgentType R = new AgentType(name: "Ruler", code: "E", description: "The ruler of your realm").save();
+        AgentType H = new AgentType(name: "Heir", code: "H", description: "Heir to the realm").save();
+        AgentType He = new AgentType(name: "Hero", code: "He", description: "A heroic figure, pledged to your service").save();
+        AgentType Th = new AgentType(name: "Thrall", code: "Th", description: "Under your control, secretly or otherwise").save();
 
         AllegianceType Unknown = new AllegianceType(name: "Unknown", code: "?").save()
         AllegianceType Homeland = new AllegianceType(name: "Homeland", code: "H").save()

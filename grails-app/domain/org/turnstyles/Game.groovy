@@ -1,8 +1,5 @@
 package org.turnstyles
 
-// FireAndIce = new org.turnstyles.Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
-// FireAndIce.currentTurn = Turn25
-
 class Game {
     String name = "Name"
     String code = "Code"
@@ -24,5 +21,11 @@ class Game {
         currentTurn nullable: true
 
         notes blank: true
+    }
+    def seedContext (servletContext) {
+        //servletContext.r =
+        // FireAndIce = new org.turnstyles.Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
+
+        // FireAndIce.currentTurn = Turn25
     }
 }
