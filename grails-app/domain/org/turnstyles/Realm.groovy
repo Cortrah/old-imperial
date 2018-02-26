@@ -96,11 +96,10 @@ class Realm {
         endingTv()
     }
     def seedContext (servletContext) {
-        //servletContext.r =
-        //Realm Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
-        //        game: FireAndIce, turn: Turn25).save()
-        //Realm EThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
-        //        game: FireAndIce, turn: Turn25).save()
+        servletContext.Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
+                game: FireAndIce, turn: Turn25).save()
+        servletContext.EThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
+                game: FireAndIce, turn: Turn25).save()
     }
 }
 

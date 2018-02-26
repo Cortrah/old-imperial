@@ -10,7 +10,6 @@ class Turn {
     String chronicle = "Sahul.1440.pdf"
     Date dueDate = new Date()
     String notes = "Notes"
-    String toString() {"$name"}
 
     static belongsTo = [game: Game]
 
@@ -18,6 +17,8 @@ class Turn {
     // this is to encompass possible changes to everything
     // from the realms name to each turns realm status to each turns set of realm actions
     static hasMany = [realms: Realm, majorMaps: MajorMap, narratives: Narrative]
+
+    String toString() {"$name"}
 
     static graphql = true
     static constraints = {
@@ -32,10 +33,10 @@ class Turn {
         dueDate()
         chronicle nullable: true
     }
-    def seedContext (servletContext) {
-        //servletContext.r =
-        // Turn Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: FireAndIce).save()
-        // Turn25.addToMajorMaps(sahulMap).save()
+    def seedContext (servletContext, gameInstance, majorMapInstance) {
+        //servletContext.Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: FireAndIce).save()
+        servletContext.Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: gameInstance).save()
+        servletContext.Turn25.addToMajorMaps(majorMapInstance).save()
     }
 }
 

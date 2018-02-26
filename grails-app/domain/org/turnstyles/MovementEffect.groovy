@@ -1,5 +1,7 @@
 package org.turnstyles
 
+import org.turnstyles.MovementType
+
 // ToDo: Add Calculations for
 // nav, air, qr
 // hostile
@@ -10,23 +12,22 @@ package org.turnstyles
 //
 // ToDo: add sharing info in bulk or by instance to generic effect
 
-
-
 class MovementEffect {
-    String name = "name"
-    String code = 'code'
-    String description = "movement effect"
-    String toString() {"$name"}
+    String name = "Uknown"
+    String code = '?'
+    String description = "A Mystery"
 
     MovementType movementType
+
+    String targetType = "cost"
+    String operator = "+"
+    Integer amount = 0
 
     // Conditions
     // MovementRule
     // Effect
 
-    String targetType = "cost"
-    String operator = "+"
-    Integer amount = 0
+    String toString() {"$name"}
 
     static graphql = true
     static constraints = {
@@ -41,11 +42,9 @@ class MovementEffect {
         operator inList: ['+', '-', '*']
         amount()
     }
+
     def seedContext (servletContext) {
-        //servletContext.r =
-        //MovementEffect adjLBCost = new MovementEffect(
-        //        name: "Adjacent Land Border Cost", code: "adj", movementType: landMv,
-        //        description: "The cost for moving across an adjacent land border",
-        //        targetType: "cost", operator: "+", ammount:0).save()
+        // will always require both a MovementType and be part of one or more MovementRules
+        // so we will create both in MovementRule even thought it's not a belongsTo
     }
 }

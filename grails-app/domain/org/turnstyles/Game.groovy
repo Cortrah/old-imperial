@@ -1,15 +1,18 @@
 package org.turnstyles
 
+import org.turnstyles.Turn
+
 class Game {
-    String name = "Name"
-    String code = "Code"
-    String label = "Label"
+    String name = "GameName"
+    String code = "GameCode"
+    String label = "GameLabel"
     String notes = "Notes"
     String status = "Staging"
-    String toString() {"$name"}
 
     Turn currentTurn
     static hasMany = [turns: Turn]
+
+    String toString() {"$name"}
 
     static graphql = true
     static constraints = {
@@ -22,10 +25,13 @@ class Game {
 
         notes blank: true
     }
-    def seedContext (servletContext) {
-        //servletContext.r =
-        // FireAndIce = new org.turnstyles.Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
 
-        // FireAndIce.currentTurn = Turn25
+    def seedContext (servletContext) {
+        servletContext.FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
+    }
+
+    def seedSecondPass (servletContext, turn){
+        // this part may need to be in a second pass for cyclic dependencies
+        servletContext.FireAndIce.currentTurn = turn
     }
 }

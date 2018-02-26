@@ -1,9 +1,10 @@
 package org.turnstyles
 
 class AllegianceType {
-    String name = "Uncontrolled"
-    String code = "U"
-    String description = "An independent entity"
+    String name = "Unknown"
+    String code = "?"
+    String description = "A Mystery"
+
     String toString() {"$name"}
 
     static graphql = true
@@ -12,17 +13,17 @@ class AllegianceType {
         code blank: false
         description blank: true
     }
+
     def seedContext (servletContext) {
-        //servletContext.r =
-        // AllegianceType Unknown = new AllegianceType(name: "Unknown", code: "?").save()
-        // AllegianceType Homeland = new AllegianceType(name: "Homeland", code: "H").save()
-        // AllegianceType Friendly = new AllegianceType(name: "Friendly", code: "F").save()
-        // AllegianceType Pacified = new AllegianceType(name: "Pacified", code: "P").save()
-        // AllegianceType Allied = new AllegianceType(name: "Allied", code: "A").save()
-        // AllegianceType Tributary = new AllegianceType(name: "Tributary", code: "T").save()
-        // AllegianceType Hostile = new AllegianceType(name: "Hostile", code: "Hs").save()
-        // AllegianceType AtWar = new AllegianceType(name: "At War", code: "Wr").save()
-        // AllegianceType Occupied = new AllegianceType(name: "Occupied", code: "O").save()
-        // AllegianceType Contested = new AllegianceType(name: "Contested", code: "C").save()
+        servletContext.Unknown = new AllegianceType(name: "Uncontrolled", code: "U", description: "An independent entity").save()
+        servletContext.Homeland = new AllegianceType(name: "Homeland", code: "H").save()
+        servletContext.Friendly = new AllegianceType(name: "Friendly", code: "F").save()
+        servletContext.Pacified = new AllegianceType(name: "Pacified", code: "P").save()
+        servletContext.Allied = new AllegianceType(name: "Allied", code: "A").save()
+        servletContext.Tributary = new AllegianceType(name: "Tributary", code: "T").save()
+        servletContext.Hostile = new AllegianceType(name: "Hostile", code: "Hs").save()
+        servletContext.AtWar = new AllegianceType(name: "At War", code: "Wr").save()
+        servletContext.Occupied = new AllegianceType(name: "Occupied", code: "O").save()
+        servletContext.Contested = new AllegianceType(name: "Contested", code: "C").save()
     }
 }

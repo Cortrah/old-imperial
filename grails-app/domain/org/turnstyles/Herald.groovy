@@ -26,8 +26,7 @@ class Herald {
         isSecret nullable: false
     }
     def seedContext (servletContext) {
-        //servletContext.r =
-        // Cortrah = new org.turnstyles.Herald(name: "Cortrah", code: "C", label: "Cort", realm: Kommolek).save()
-        // Kolgrim = new Herald(name: "Kolgrim", label: "Gman", realm: EThace).save()
+        servletContext.Cortrah = new org.turnstyles.Herald(name: "Cortrah", code: "C", label: "Cort", realm: Kommolek).save()
+        servletContext.Kolgrim = new Herald(name: "Kolgrim", label: "Gman", realm: EThace).save()
     }
 }

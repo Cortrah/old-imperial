@@ -88,30 +88,29 @@ class Region {
         path()
     }
     def seedContext (servletContext) {
-        //servletContext.r =
-        //Region KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
-        //        gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
-        //        realm: Kommolek, allegiance: Homeland,  bordersVolcano: false,
-        //        hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-        //        kindred: WenemetKin, terrain: Clear, majorMap: sahulMap).save()
-        //
-        //Region KomRegion2 = new Region(name: "Korev", code: "Kor", label: "Korev",
-        //        gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
-        //        hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-        //        realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
-        //        kindred: SaurianKin, terrain: Clear, majorMap: sahulMap).save()
-        //
-        //Region KomRegion3 = new Region(name: "Colledhu", code: "Col", label: "Colledhu",
-        //        gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
-        //        hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-        //        realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
-        //        kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
-        //
-        //Region KomRegion4 = new Region(name: "Namdynn", code: "Nam", label: "Namdynn",
-        //        gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
-        //        hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
-        //        realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
-        //        kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
+        servletContext.KomRegion1 = new Region(name: "Komolek", code: "Kom", label: "Komolek",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
+                realm: Kommolek, allegiance: Homeland,  bordersVolcano: false,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                kindred: WenemetKin, terrain: Clear, majorMap: sahulMap).save()
+
+        servletContext.KomRegion2 = new Region(name: "Korev", code: "Kor", label: "Korev",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
+                kindred: SaurianKin, terrain: Clear, majorMap: sahulMap).save()
+
+        servletContext.KomRegion3 = new Region(name: "Colledhu", code: "Col", label: "Colledhu",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
+                kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
+
+        servletContext.KomRegion4 = new Region(name: "Namdynn", code: "Nam", label: "Namdynn",
+                gp: 1, ap: 1, nfp: 1, mana: 4, pwb: 32, tv: 1, turn: Turn25,
+                hasRoad: true, isSecret: false, isInimical: false, resistance: 2,
+                realm:Kommolek, allegiance: Friendly, bordersVolcano: false,
+                kindred: WenemetKin, terrain: Hill, majorMap: sahulMap).save()
     }
 }
 

@@ -2,6 +2,8 @@ package org.turnstyles
 
 // usually instances of an itemType like a spell crystal, but can be a unique typeless item as well
 // ToDo: is cargo a type of cost? or it's own thing?
+// an item might want to have hasMany cost,effect and product types
+// to make it the most generic form of object in the game
 
 class Item {
 

@@ -1,9 +1,9 @@
 package org.turnstyles
 
 class Religion {
-    String name = "Name"
-    String code = "Code"
-    String label = "Label"
+    String name = "Unknown"
+    String code = "?"
+    String label = "A Mystery"
 
     String description = "default description"
     String symbol = "symbol.png"

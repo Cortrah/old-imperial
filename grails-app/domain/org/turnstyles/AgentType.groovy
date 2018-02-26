@@ -2,9 +2,9 @@ package org.turnstyles
 
 class AgentType {
 
-    String name = "Name"
-    String code = "Code"
-    String description = "ok"
+    String name = "Unknown"
+    String code = "?"
+    String description = "A Mystery"
 
     String toString() {"$name"}
 
@@ -15,14 +15,13 @@ class AgentType {
         description (nullable: true, widget: 'textarea')
     }
     def seedContext (servletContext) {
-        //servletContext.r =
-        // AgentType R = new AgentType(name: "Ruler", code: "E", description: "").save();
-        // AgentType H = new AgentType(name: "Heir", code: "H", description: "").save();
-        // AgentType F = new AgentType(name: "Friendly", code: "F", description: "").save();
-        // AgentType A = new AgentType(name: "Allied", code: "A", description: "").save();
-        // AgentType M = new AgentType(name: "Mercenary", code: "M", description: "").save();
-        // AgentType He = new AgentType(name: "Hero", code: "He", description: "").save();
-        // AgentType Th = new AgentType(name: "Thrall", code: "Th", description: "").save();
+        servletContext.e = new AgentType(name: "Ruler", code: "E", description: "").save();
+        servletContext.h = new AgentType(name: "Heir", code: "H", description: "").save();
+        servletContext.f = new AgentType(name: "Friendly", code: "F", description: "").save();
+        servletContext.a = new AgentType(name: "Allied", code: "A", description: "").save();
+        servletContext.m = new AgentType(name: "Mercenary", code: "M", description: "").save();
+        servletContext.he = new AgentType(name: "Hero", code: "He", description: "").save();
+        servletContext.th = new AgentType(name: "Thrall", code: "Th", description: "").save();
     }
 }
 
