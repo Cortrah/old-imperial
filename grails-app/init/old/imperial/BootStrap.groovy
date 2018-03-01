@@ -62,18 +62,10 @@ class BootStrap {
         Game defaultGame = new Game().save()
         defaultGame.seedContext(servletContext);
 
-//        Turn defaultTurn = new Turn(defaultGame).save()
-//        defaultTurn.seedContext(servletContext);
-
-//        Realm defaultRealm = new Realm().save()
-//        defaultRealm.seedContext(servletContext);
-//
-//        Herald defaultHerald = new Herald().save()
-//        defaultHerald.seedContext(servletContext);
-//
 //        MajorMap defaultMajorMap = new MajorMap().save()
-//        defaultMajorMap.seedContext(servletContext);
-//
+//        defaultMajorMap.seedContext(servletContext, defaultGame);
+
+
 //        Region defaultRegion = new Region().save()
 //        defaultRegion.seedContext(servletContext);
 //

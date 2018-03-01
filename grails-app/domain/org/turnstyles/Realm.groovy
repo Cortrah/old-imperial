@@ -1,12 +1,14 @@
 package org.turnstyles
 
-// really a RealmTurn or RealmStatus as anything can change from turn to turn
+// really a RealmTurn or RealmStatus
+// as anything can change from turn to turn
+// and so we have a new instance each turn
 
 class Realm {
-    String name = "Name"
-    String code = "Code"
-    String label = "Label"
-    String description = "default description"
+    String name = "RealmName"
+    String code = "RealmCode"
+    String label = "RealmLabel"
+    String description = "Default Description"
     String toString() {"$name"}
 
     // ------------
@@ -16,10 +18,10 @@ class Realm {
     Integer displayColor = 0
     Boolean isSecret = false
 
-    Location captialLocation
-    Region homeRegion
-    Religion religon
-    RealmType realmType
+    //Location captialLocation
+    //Region homeRegion
+    //Religion religon
+    //RealmType realmType
 
     Double startingIsi = 0.0
     Double startingTv = 0.0
@@ -95,11 +97,8 @@ class Realm {
         endingIsi()
         endingTv()
     }
+
     def seedContext (servletContext) {
-        servletContext.Kommolek = new Realm(name: "Dutchy of Kommolek", code: "Kom", label: "Kommolek",
-                game: FireAndIce, turn: Turn25).save()
-        servletContext.EThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
-                game: FireAndIce, turn: Turn25).save()
     }
 }
 

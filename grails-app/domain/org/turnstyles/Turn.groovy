@@ -1,10 +1,10 @@
 package org.turnstyles
 
 class Turn {
-    String name = "1440-1445"
+    String name = "0-5"
     Integer number = 1
-    Integer startingYear = 1440
-    Integer endingYear = 1445
+    Integer startingYear = 0
+    Integer endingYear = 5
 
     String status = "Staging"
     String chronicle = "Sahul.1440.pdf"
@@ -34,9 +34,6 @@ class Turn {
         chronicle nullable: true
     }
     def seedContext (servletContext, gameInstance, majorMapInstance) {
-        //servletContext.Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: FireAndIce).save()
-        servletContext.Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575, game: gameInstance).save()
-        servletContext.Turn25.addToMajorMaps(majorMapInstance).save()
     }
 }
 

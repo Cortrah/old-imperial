@@ -34,9 +34,9 @@ class MajorMap {
 
         isSecret nullable: false
     }
-    def seedContext (servletContext) {
+    def seedContext (servletContext, gameInstance) {
 
-        servletContext.sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul", game: FireAndIce,
+        servletContext.sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul", game: gameInstance,
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
     }
