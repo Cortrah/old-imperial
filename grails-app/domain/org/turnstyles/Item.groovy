@@ -1,9 +1,11 @@
 package org.turnstyles
 
 // usually instances of an itemType like a spell crystal, but can be a unique typeless item as well
-// ToDo: is cargo a type of cost? or it's own thing?
-// an item might want to have hasMany cost,effect and product types
+// ToDo: is cargo a type of cost? or it's own thing? LeaderMovement points or turns?
+// an item might want to have hasMany cost, effect and product types
 // to make it the most generic form of object in the game
+// a spell may include the leaderAction movement as a part of it's cost
+// a spell crystal should even use a blankcrystal as a part of it's cost.
 
 class Item {
 
