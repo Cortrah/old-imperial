@@ -5,17 +5,17 @@ package org.turnstyles
 // and so we have a new instance each turn
 
 class Realm {
-    String name = "RealmName"
-    String code = "RealmCode"
-    String label = "RealmLabel"
-    String description = "Default Description"
+    String name = "Unknown"
+    String code = "?"
+    String label = "Unknown"
+    String description = "An Unknown Realm"
     String toString() {"$name"}
 
     // ------------
     // public
     // ------------
     Herald herald
-    Integer displayColor = 0
+    Integer color = 0
     Boolean isSecret = false
 
     //Location captialLocation

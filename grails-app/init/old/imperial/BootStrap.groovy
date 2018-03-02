@@ -9,18 +9,10 @@ import org.turnstyles.LeaderActionType
 import org.turnstyles.Religion
 
 import org.turnstyles.Game
-import org.turnstyles.Herald
 import org.turnstyles.MovementEffect
 import org.turnstyles.MovementRule
 import org.turnstyles.MovementType
 import org.turnstyles.TerrainType
-import org.turnstyles.Turn
-import org.turnstyles.Realm
-import org.turnstyles.MajorMap
-import org.turnstyles.Region
-import org.turnstyles.Location
-import org.turnstyles.RegionBorders
-
 
 class BootStrap {
 
@@ -61,23 +53,6 @@ class BootStrap {
 
         Game defaultGame = new Game().save()
         defaultGame.seedContext(servletContext);
-
-//        MajorMap defaultMajorMap = new MajorMap().save()
-//        defaultMajorMap.seedContext(servletContext, defaultGame);
-
-
-//        Region defaultRegion = new Region().save()
-//        defaultRegion.seedContext(servletContext);
-//
-//        Location defaultLocation = new Location().save()
-//        defaultLocation.seedContext(servletContext);
-//
-//        RegionBorders defaultBorder = new RegionBorders().save()
-//        defaultBorder.seedContext(servletContext);
-
-        //Turn25.addToMajorMaps(sahulMap).save()
-        //FireAndIce.currentTurn = Turn25
-        //servletContext.defaultGame.seedSecondPass(servletContext, Turn25);
     }
 
     def destroy = {

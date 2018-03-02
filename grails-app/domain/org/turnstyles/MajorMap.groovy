@@ -2,9 +2,9 @@ package org.turnstyles
 
 class MajorMap {
 
-    String name = "FireAndIce:Sahul"
-    String code = "Sah"
-    String label = "Sahul"
+    String name = "Unknown"
+    String code = "?"
+    String label = "Unknown"
     String description = ""
 
     Integer x = 0
@@ -33,12 +33,6 @@ class MajorMap {
         bg nullable: true
 
         isSecret nullable: false
-    }
-    def seedContext (servletContext, gameInstance) {
-
-        servletContext.sahulMap = new MajorMap(name: "FireAndIce:Sahul", code: "Sah", label: "Sahul", game: gameInstance,
-                description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
-                x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
     }
 }
 
