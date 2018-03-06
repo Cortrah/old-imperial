@@ -2,12 +2,11 @@ package org.turnstyles
 
 class LeaderAction {
 
-    String name = "Name"
-    String code = "Code"
-    String description = ""
+    String name = "Custom"
+    String code = "!"
+    String description = "A Custom Action"
     String toString() {"$name"}
 
-    // replace with hasmany costs?
     Integer gpCost = 0
     Integer apCost = 0
     Integer nfpCost = 0
@@ -15,11 +14,15 @@ class LeaderAction {
     Integer manaCost = 0
     Integer totalManaCost = 0
 
+    // in case it's a special action, creating a spell crystal requires a blank, etc
+    static hasMany = [costs :Cost, effects: Effect]
+
     // how to deal with movement costs of a turn or more? just 25, 50, etc?
     Integer movementCost = 0
 
     LeaderActionType leaderActionType
 
+    MajorMap majorMap
     Region region
     Location atLocation
     Location toLocation
@@ -32,18 +35,18 @@ class LeaderAction {
     Boolean isWithOthers = false
     Boolean isPrimaryTarget = true
 
-    // unitType
-    // unitCount
-    // item
-    // ItemType
-    // effect
+    UnitType unitType
+    Integer unitCount
+
+    Item item
+    ItemType itemType
 
     String defaultResults = ""
     String finalResults = ""
 
     MovementType movementType
 
-    String monitorLevel = "Probably Fine"
+    String monitorLevel = "Ok"
 
     static graphql = true
     static constraints = {
@@ -61,8 +64,9 @@ class LeaderAction {
 
         leaderActionType nullable: false
 
-        region nullable: true
-        atLocation nullable: true
+        majorMap nullable: false
+        region nullable: false
+        atLocation nullable: false
         toLocation nullable: true
         otherLocation nullable: true
 
@@ -74,12 +78,35 @@ class LeaderAction {
         isPrimaryTarget nullable: true
 
         movementType nullable: true
-        monitorLevel inList: ["Probably Fine", "Check", "Wierd", "Probable Error"]
+        monitorLevel inList: ["Ok", "Probably Fine", "Check", "Probable Error"]
 
         defaultResults blank: true
         finalResults blank: true
     }
     def seedContext (servletContext) {
-        //servletContext.r =
+        // servletContext.move = new LeaderActionType(name: "Movement", code: "Mv", description: "").save();
+        //
+
+        // servletContext.combat = new LeaderActionType(name: "Combat", code: "Cbt", description: "").save();
+        // Protect, Duel, Plunder, Slave Raid, Atttack, Assault Fortification, Attack to secure Tribute,
+        // Beseige Fortification, Blockade, Genocide, Respond, Sack, Defend, Evade, Loot, Convert, Pillage
+
+        // servletContext.intel = new LeaderActionType(name: "Inteligence", code: "Int", description: "").save();
+        // Infiltrate, Receive Intel, Assasination, CounterIntel, Incite Rebelion, Kidnap Leader, Scout
+        // Search and Excavate, Steal Magic, Subvert Leader
+
+        // servletContext.diplo = new LeaderActionType(name: "Diplomacy", code: "Di", description: "").save();
+        // Rule, Secret Diplomacy, Diplomacy
+
+        // servletContext.exchange = new LeaderActionType(name: "Transfer", code: "Tr", description: "").save();
+        // Split, Combine, Transfer To, Transfer From,
+
+        // servletContext.magic = new LeaderActionType(name: "Magic", code: "Ma", description: "").save();
+        // Cast Spell, Research Spell
+
+        // servletContext.conditional = new LeaderActionType(name: "Conditional", code: "???", description: "").save();
+
+        // servletContext.custom = new LeaderActionType(name: "Custom", code: "XX", description: "").save();
+
     }
 }

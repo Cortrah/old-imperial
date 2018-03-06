@@ -20,6 +20,7 @@ class LeaderActionType {
         servletContext.diplo = new LeaderActionType(name: "Diplomacy", code: "Di", description: "").save();
         servletContext.exchange = new LeaderActionType(name: "Transfer", code: "Tr", description: "").save();
         servletContext.magic = new LeaderActionType(name: "Magic", code: "Ma", description: "").save();
+        servletContext.conditional = new LeaderActionType(name: "Conditional", code: "???", description: "").save();
         servletContext.custom = new LeaderActionType(name: "Custom", code: "XX", description: "").save();
     }
 }

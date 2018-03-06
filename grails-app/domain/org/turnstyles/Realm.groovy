@@ -1,10 +1,17 @@
 package org.turnstyles
 
+import org.turnstyles.QualityRatingType
+import org.turnstyles.QualityRating
+
 // really a RealmTurn or RealmStatus
 // as anything can change from turn to turn
 // and so we have a new instance each turn
 
+// what about naming conventions, only use associative name when something belongsTo the other?
+// so in this case TurnsRealm? No. I don't like it. RealmStatus or RealmTurn would be better
+
 class Realm {
+
     String name = "Unknown"
     String code = "?"
     String label = "Unknown"
@@ -45,24 +52,15 @@ class Realm {
     Double sfp = 0.0
     Double armySupport = 0.0
 
-    Integer cavQr = 0
-    Integer infQr = 0
-    Integer sgeQr = 0
-    Integer navQr = 0
-    Integer airQr = 0
-    Integer nsrQr = 0
-    Integer irQr = 0
-    Integer blQr = 0
-    Integer rsQr = 0
-
-    Integer cavInvestment = 0
-    Integer infInvestment = 0
-    Integer sgeInvestment = 0
-    Integer navInvestment = 0
-    Integer airInvestment = 0
-    Integer irInvestment = 0
-    Integer blInvestment = 0
-    Integer nsrInvestment = 0
+    QualityRating cavQr
+    QualityRating infQr
+    QualityRating sgeQr
+    QualityRating navQr
+    QualityRating airQr
+    QualityRating nsrQr
+    QualityRating irQr
+    QualityRating blQr
+    QualityRating rsQr
 
     String realmNotes = "Notes"
 
@@ -99,6 +97,16 @@ class Realm {
     }
 
     def seedContext (servletContext) {
+        // for here maybe a for each on the base type instantiating each  the seedcontext
+        this.cavQr = servletContext.cav = new QualityRatingType(name: "Cavalry", code: "Cav", description: "Infantry Rating");
+        this.infQr = servletContext.inf = new QualityRatingType(name: "Infantry", code: "Inf", description: "Infantry Rating");
+        this.airQr = servletContext.air = new QualityRatingType(name: "Air", code: "Air", description: "Air Rating");
+        this.navQr = servletContext.nav = new QualityRatingType(name: "Naval", code: "Nav", description: "Naval Rating");
+        this.sgeQr = servletContext.sge = new QualityRatingType(name: "Siege", code: "Sge", description: "Siege Rating");
+        this.irQr = servletContext.ir = new QualityRatingType(name: "Inteligence", code: "Ir", description: "Inteligence Rating");
+        this.blQr = servletContext.bl = new QualityRatingType(name: "Beaurocracy", code: "Bl", description: "Beaurocracy Level");
+        this.nsrQr = servletContext.nsr = new QualityRatingType(name: "Spell", code: "Nsr", description: "National Spell Rating");
+        this.rsQr = servletContext.rs = new QualityRatingType(name: "Religion", code: "Rs", description: "Religious Strength");
     }
 }
 

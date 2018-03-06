@@ -4,8 +4,8 @@ package org.turnstyles
 // ToDo: sharing mechanism like military or economic deal
 
 class Marker {
-    String name = "Name"
-    String code = "Code"
+    String name = "Marker"
+    String code = "?"
     String tooltip = ""
     String description = ""
 
@@ -28,9 +28,6 @@ class Marker {
         code blank: false
         description nullable: true
         tooltip nullable: true
-    }
-    def seedContext (servletContext) {
-        //servletContext.r =
     }
 }
 

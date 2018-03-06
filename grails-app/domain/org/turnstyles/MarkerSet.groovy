@@ -11,7 +11,7 @@ package org.turnstyles
 // though then we should tie them to regions instead of majorMaps
 
 class MarkerSet {
-    String name = "Name"
+    String name = "Markers"
     Integer color = 0
     Boolean isVisible = true
 
@@ -25,9 +25,6 @@ class MarkerSet {
         name blank: false
         color()
         isVisible()
-    }
-    def seedContext (servletContext) {
-        //servletContext.r =
     }
 }
 

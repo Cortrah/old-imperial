@@ -33,8 +33,6 @@ class Turn {
         dueDate()
         chronicle nullable: true
     }
-    def seedContext (servletContext, gameInstance, majorMapInstance) {
-    }
 }
 
 
