@@ -10,8 +10,9 @@ import org.turnstyles.AgentType
 class Leader {
 
     String name = "Unknown"
-    String Label = "Unknown"
     String code = "?"
+    String label = "Unknown"
+    String notes = "notes"
 
     MajorMap atMajorMap
     Region atRegion
@@ -19,7 +20,6 @@ class Leader {
 
     Integer carryingAp = 0
     Integer carryingGp = 0
-    String notes = "notes"
 
     String icon = "leader.svg"
     Integer displayX = 0

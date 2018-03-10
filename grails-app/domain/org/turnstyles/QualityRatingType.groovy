@@ -18,7 +18,16 @@ class QualityRatingType {
     }
 
     def seedContext (servletContext) {
-        //servletContext.r =
+        servletContext.nsr = QualityRatingType(name="Sorcery", code="Nsr")
+        servletContext.bl = QualityRatingType(name="Beaurocracy", code="Bl")
+        servletContext.ir = QualityRatingType(name="Inteligence", code="Ir")
+        servletContext.rs = QualityRatingType(name="Religious Strength", code="Rs")
+        servletContext.cav = QualityRatingType(name="Cavalry", code="Cav")
+        servletContext.inf = QualityRatingType(name="Infantry", code="Inf")
+        servletContext.sge = QualityRatingType(name="Seige", code="Sge")
+        servletContext.nav = QualityRatingType(name="Naval", code="Nav")
+        servletContext.air = QualityRatingType(name="Air", code="Air")
+        servletContext.cel = QualityRatingType(name="Celestial", code="Cel")
     }
 }
 

@@ -25,10 +25,10 @@ class Realm {
     Integer color = 0
     Boolean isSecret = false
 
-    //Location captialLocation
-    //Region homeRegion
-    //Religion religon
-    //RealmType realmType
+    Location capitalLocation
+    Region homeRegion
+    Religion religion
+    RealmType realmType
 
     Double startingIsi = 0.0
     Double startingTv = 0.0
@@ -61,6 +61,7 @@ class Realm {
     QualityRating irQr
     QualityRating blQr
     QualityRating rsQr
+    QualityRating celQr
 
     String realmNotes = "Notes"
 
@@ -72,7 +73,8 @@ class Realm {
     String deiNotes = "Dei Notes"
 
     static belongsTo = [turn: Turn]
-    static hasMany = [regions: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement, turnActions :RealmAction,
+    static hasMany = [regions: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement,
+                      turnActions: RealmAction, specialQualityRatings: QualityRating,
                       hiddenRealms: Realm, hiddenMajorMaps: MajorMap, hiddenNarratives: Narrative,
                       hiddenConstructs: Construct, hiddenLocations: Location, hiddenMinorMaps: MinorMap,
                       hiddenRegions: Region, hiddenRegionBorders: RegionBorders, hiddenFeatures: Feature,
@@ -90,6 +92,22 @@ class Realm {
 
         herald nullable: true
 
+        capitalLocation nullable: true
+        homeRegion nullable: true
+        religion nullable: true
+        realmType nullable: true
+
+        cavQr nullable: true
+        infQr nullable: true
+        airQr nullable: true
+        navQr nullable: true
+        sgeQr nullable: true
+        irQr nullable: true
+        blQr nullable: true
+        nsrQr nullable: true
+        rsQr nullable: true
+        celQr nullable: true
+
         startingIsi()
         startingTv()
         endingIsi()
@@ -98,15 +116,16 @@ class Realm {
 
     def seedContext (servletContext) {
         // for here maybe a for each on the base type instantiating each  the seedcontext
-        this.cavQr = servletContext.cav = new QualityRatingType(name: "Cavalry", code: "Cav", description: "Infantry Rating");
-        this.infQr = servletContext.inf = new QualityRatingType(name: "Infantry", code: "Inf", description: "Infantry Rating");
-        this.airQr = servletContext.air = new QualityRatingType(name: "Air", code: "Air", description: "Air Rating");
-        this.navQr = servletContext.nav = new QualityRatingType(name: "Naval", code: "Nav", description: "Naval Rating");
-        this.sgeQr = servletContext.sge = new QualityRatingType(name: "Siege", code: "Sge", description: "Siege Rating");
-        this.irQr = servletContext.ir = new QualityRatingType(name: "Inteligence", code: "Ir", description: "Inteligence Rating");
-        this.blQr = servletContext.bl = new QualityRatingType(name: "Beaurocracy", code: "Bl", description: "Beaurocracy Level");
-        this.nsrQr = servletContext.nsr = new QualityRatingType(name: "Spell", code: "Nsr", description: "National Spell Rating");
-        this.rsQr = servletContext.rs = new QualityRatingType(name: "Religion", code: "Rs", description: "Religious Strength");
+        this.cavQr = new QualityRating( qualityRatingType = servletContext.cav, level = 0, investment = 0, realm = this );
+        this.infQr = new QualityRating( qualityRatingType = servletContext.inf, level = 0, investment = 0, realm = this );
+        this.airQr = new QualityRating( qualityRatingType = servletContext.air, level = 0, investment = 0, realm = this );
+        this.navQr = new QualityRating( qualityRatingType = servletContext.nav, level = 0, investment = 0, realm = this );
+        this.sgeQr = new QualityRating( qualityRatingType = servletContext.sge, level = 0, investment = 0, realm = this );
+        this.irQr  = new QualityRating( qualityRatingType = servletContext.ir, level = 0, investment = 0, realm = this );
+        this.blQr  = new QualityRating( qualityRatingType = servletContext.bl, level = 0, investment = 0, realm = this );
+        this.nsrQr = new QualityRating( qualityRatingType = servletContext.nsr, level = 0, investment = 0, realm = this );
+        this.rsQr  = new QualityRating( qualityRatingType = servletContext.rs, level = 0, investment = 0, realm = this );
+        this.celQr = new QualityRating( qualityRatingType = servletContext.cel, level = 0, investment = 0, realm = this );
     }
 }
 

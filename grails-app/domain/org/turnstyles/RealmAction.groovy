@@ -1,6 +1,5 @@
 package org.turnstyles
 
-// Rule Change: each action takes a turn before it becomes active or inactive
 // initiate trade, military agreement, research agreement
 // accept trade, military agreement, research agreement
 // cease trade, military agreement, research agreement
@@ -32,7 +31,9 @@ package org.turnstyles
 // maybe little demons and devils or angels watch and comment on the focus and ballance of decisions
 // allow the gm to send notes through these little characters in the margins
 
+//---------------
 // income,
+//---------------
 // Gp: regional, publicWorks, city, internaltrade, international trade, saved
 // ap, nfp, sfp, mana
 // gp or mana from sacrifice
@@ -40,12 +41,17 @@ package org.turnstyles
 // from miscelaneousIncome
 // Total Income gp, ap, nfp, sfp, mana
 
+//---------------
 // expenses
+//---------------
 // sacrifices gp, ap, nfp, sfp, mana
 // army suport gp, ap
 // religious tithe
+
 // qr investments (gp + each qr has specific additional types allowed),
-// publid works investment (gp, nfp, sfp)
+
+// public works investment (gp, nfp, sfp)
+
 // from exchanges
 // from builds
 // from units

@@ -20,6 +20,7 @@ class TradeAgreement {
         name blank: false
         code blank: false
         label blank: false
+
         description nullable: true
         terms nullable: true
 
