@@ -22,8 +22,8 @@ class Leader {
     Integer carryingGp = 0
 
     String icon = "leader.svg"
-    Integer displayX = 0
-    Integer displayY = 0
+    Integer x = 0
+    Integer y = 0
 
     Integer command = 5
     Integer loyalty = 5
@@ -58,8 +58,8 @@ class Leader {
         atLocation nullable: true
 
         icon nullable: true
-        displayX nullable: true
-        displayY nullable: true
+        x nullable: true
+        y nullable: true
 
         command nullable: false
         loyalty nullable: false

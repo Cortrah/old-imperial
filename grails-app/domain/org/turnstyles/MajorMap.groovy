@@ -17,7 +17,7 @@ class MajorMap {
     boolean isSecret = false
 
     static hasMany = [regions: Region]
-    static belongsTo = [game: Game]
+    static belongsTo = [turn: Turn]
 
     static graphql = true
     static constraints = {

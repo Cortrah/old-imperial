@@ -46,7 +46,7 @@ class Game {
         servletContext.Kolgrim = new Herald(name: "Kolgrim", label: "Gman",
                 realm: servletContext.EThace).save()
 
-        servletContext.sahulMap = new MajorMap(name: "FireAndIce: Imperial Sahul", code: "Sah", label: "Sahul", game: servletContext.FireAndIce,
+        servletContext.sahulMap = new MajorMap(name: "FireAndIce: Imperial Sahul", code: "Sah", label: "Sahul", turn: servletContext.Turn25,
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",
                 x: 0, y: 0, height: 1400, width: 2600, bg: "sahul.svg", isSecret: false).save()
 

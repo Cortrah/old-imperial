@@ -45,10 +45,10 @@ class BorderType {
                 name: "Bridge", code: "=", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         servletContext.minMtnBorder = new BorderType(
-                name: "Minor Mountain", code: "-m-", description: "",
+                name: "Minor Mountain", code: ".m.", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         servletContext.majMtnBorder = new BorderType(
-                name: "Major Mountain", code: "-M-", description: "",
+                name: "Major Mountain", code: ".M.", description: "",
                 landCost: 0, airCost: 0, navalCost:0, manaCost:0).save()
         servletContext.minMtnPassBorder = new BorderType(
                 name: "Minor Mountain Pass", code: "_m_", description: "",

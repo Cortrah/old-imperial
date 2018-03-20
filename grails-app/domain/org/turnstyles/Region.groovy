@@ -49,7 +49,7 @@ class Region {
     String path = "m0,0 L100,0 L100,100 L0,100 z"
 
     static belongsTo = [majorMap: MajorMap]
-    static hasMany = [locations: Location]
+    static hasMany = [locations: Location, borders: RegionBorders]
 
     static graphql = true
     static constraints = {
