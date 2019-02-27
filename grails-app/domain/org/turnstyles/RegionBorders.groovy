@@ -1,5 +1,7 @@
 package org.turnstyles
 
+// ToDo: possibly rename as RegionBorder? singular?
+
 class RegionBorders {
     String name = "Source:Sink"
     String code = "S:S"

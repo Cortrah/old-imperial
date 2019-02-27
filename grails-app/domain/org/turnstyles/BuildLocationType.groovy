@@ -1,7 +1,8 @@
 package org.turnstyles
 
-// Controlled Region, Homeland, Town City, Port, Fortress,
-// Controlled Forest, Controlled Swamp, Controlled Jungle,
+// ToDo: add the unit types that can be built
+// Region, Homeland, Town, City, Port, Fortress,
+// Forest, Swamp, Jungle,
 // Gryphon Nest, ElephantRange
 
 class BuildLocationType {

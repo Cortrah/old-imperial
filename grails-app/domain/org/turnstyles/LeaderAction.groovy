@@ -7,6 +7,7 @@ class LeaderAction {
     String description = "A Custom Action"
     String toString() {"$name"}
 
+    // ToDo: currently we spell out the common costs and have a special category for extra costs or effects, keep this?
     Integer gpCost = 0
     Integer apCost = 0
     Integer nfpCost = 0

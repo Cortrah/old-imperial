@@ -1,6 +1,7 @@
 package org.turnstyles
 
 // Nsr, Bl, Ir, Rs, Cav, Inf, Sge, Nav, Air, Cel, (Rugby, Shinty ...)
+// ToDo: add effects for certain qualityRatingType ranges
 
 class QualityRatingType {
 

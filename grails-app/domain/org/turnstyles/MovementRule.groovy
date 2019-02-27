@@ -3,8 +3,8 @@ package org.turnstyles
 import org.turnstyles.MovementType
 import org.turnstyles.MovementEffect
 
-// movementType speed, reactionspeed,  cargo capacity, cargo cost
-// where the effect is the number?
+// ToDo: movementType speed, reactionspeed,  cargo capacity, cargo cost?
+// ToDo: where the effect is a number? or a formula?
 
 class MovementRule {
     String name = "Unknown"

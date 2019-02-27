@@ -19,6 +19,7 @@ class ConstructType {
     String label = "Label"
     String description = ""
 
+    // ToDo: abstract costs?
     Integer gpCost = 0
     Integer apCost = 0
     Integer nfpCost = 0
@@ -28,6 +29,7 @@ class ConstructType {
     ConstructType upgradeFrom
     ConstructType upgradeTo
 
+    // ToDo: abstract producers?
     Integer providesGp = 0
     Integer providesAp = 0
     Integer providesNfp = 0

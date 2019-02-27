@@ -3,7 +3,7 @@ package org.turnstyles
 import org.turnstyles.QualityRatingType
 import org.turnstyles.QualityRating
 
-// really a RealmTurn or RealmStatus
+// ToDo: this is really a RealmTurn or RealmStatus
 // as anything can change from turn to turn
 // and so we have a new instance each turn
 

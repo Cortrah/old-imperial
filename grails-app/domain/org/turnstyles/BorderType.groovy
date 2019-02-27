@@ -5,6 +5,7 @@ class BorderType {
     String code = "?"
     String description = "A Mystery"
 
+    // ToDo: Abstract costs?
     Integer landCost = null
     Integer airCost = null
     Integer navalCost = null

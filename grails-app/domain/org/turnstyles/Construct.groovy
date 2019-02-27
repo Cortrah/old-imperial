@@ -25,6 +25,7 @@ class Construct {
 
     ConstructType constructType
 
+    // ToDo: abstract resourceProducer?
     Integer providesGp = 0
     Integer providesAp = 0
     Integer providesNfp = 0

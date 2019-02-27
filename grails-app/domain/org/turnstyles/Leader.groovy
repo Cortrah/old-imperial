@@ -18,6 +18,7 @@ class Leader {
     Region atRegion
     Location atLocation
 
+    // ToDo: possibly make this more abstract cargo to deal with items as well
     Integer carryingAp = 0
     Integer carryingGp = 0
 

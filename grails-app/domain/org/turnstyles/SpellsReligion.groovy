@@ -1,6 +1,6 @@
 package org.turnstyles
 
-// simple relation, perhaps spells have many religions
+// ToDo: this is a simple relation, but perhaps spells have many religions? Use relations or just additional instances?
 
 class SpellsReligion {
 
