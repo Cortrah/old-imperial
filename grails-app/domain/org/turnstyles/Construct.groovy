@@ -2,6 +2,8 @@ package org.turnstyles
 
 // an instance of a ConstructType with a level, investment and production values which vary by instance
 
+// should replace providesGp etc with Products of type resourceType
+
 class Construct {
 
     String name = "Name"

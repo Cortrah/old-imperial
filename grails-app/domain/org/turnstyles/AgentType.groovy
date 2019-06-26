@@ -5,6 +5,7 @@ class AgentType {
     String name = "Unknown"
     String code = "?"
     String description = "A Mystery"
+    // moveMentRules
 
     String toString() {"$name"}
 

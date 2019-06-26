@@ -1,5 +1,6 @@
 package org.turnstyles
 
+// gp, ap, nfp, sfp, mana, spell crystal?
 // ToDo: seed gp, ap, nfp, sfp, mana
 
 class ResourceType {

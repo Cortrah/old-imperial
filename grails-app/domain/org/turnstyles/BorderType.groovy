@@ -13,6 +13,8 @@ class BorderType {
 
     boolean isDirectional = false
 
+    // Movement Rules
+
     String toString() {"$name"}
 
     static graphql = true

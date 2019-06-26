@@ -33,6 +33,7 @@ distiling with their pens an elixir that would nurture the dreams of many for de
 
 
 #To Run
+
     grails dev run-app    
     http://localhost:8080
     http://localhost:8080/graphql/browser

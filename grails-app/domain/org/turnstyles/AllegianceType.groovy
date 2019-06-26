@@ -4,6 +4,7 @@ class AllegianceType {
     String name = "Unknown"
     String code = "?"
     String description = "A Mystery"
+    // Movement Rules
 
     String toString() {"$name"}
 
