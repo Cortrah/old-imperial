@@ -11,6 +11,7 @@ import org.turnstyles.MovementType
 // mixed ?
 //
 // ToDo: add sharing info in bulk or by instance to generic effect
+// ToDo: might best be done with a closure or lambda formula
 
 class MovementEffect {
     String name = "Uknown"
@@ -23,6 +24,7 @@ class MovementEffect {
     String operator = "+"
     Integer amount = 0
 
+    // ToDo:
     // Conditions
     // MovementRule
     // Effect

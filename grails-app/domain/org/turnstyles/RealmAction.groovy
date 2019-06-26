@@ -1,5 +1,6 @@
 package org.turnstyles
 
+// ToDo:
 // initiate trade, military agreement, research agreement
 // accept trade, military agreement, research agreement
 // cease trade, military agreement, research agreement

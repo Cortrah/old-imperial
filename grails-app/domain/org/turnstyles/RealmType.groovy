@@ -1,6 +1,6 @@
 package org.turnstyles
 
-// primacy, elector, dutchy , secret society ...
+// ToDo: seed primacy, elector, dutchy , secret society ...
 
 class RealmType {
 

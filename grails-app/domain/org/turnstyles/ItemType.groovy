@@ -1,7 +1,6 @@
 package org.turnstyles
 
 // common items of which there may be many instances
-// ToDo: is cargo a type of cost? or it's own thing?
 
 class ItemType {
 
@@ -14,7 +13,7 @@ class ItemType {
 
     Double cargoSpace = 0
 
-    // maybe a more generic Effects with a spell type and amount
+    // ToDo: maybe a more generic Effects with a spell type and amount
     SpellType spellType
 
     // Artifacts or batteries with a manaCharge might be a generic resource or cargo value

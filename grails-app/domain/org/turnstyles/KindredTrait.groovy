@@ -1,5 +1,6 @@
 package org.turnstyles
 
+// ToDo: seed common traits
 // isAmphibian
 // isFlyer
 // isArmored

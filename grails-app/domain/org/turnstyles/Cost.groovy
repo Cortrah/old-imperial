@@ -1,6 +1,6 @@
 package org.turnstyles
 
-// gp, ap, nfp, sfp, mana, blankSpellCrystal
+// ToDo:  gp, ap, nfp, sfp, mana, blankSpellCrystal as rescourceTypes
 // totalManaCost for multi caster or per unit spell
 
 class Cost {

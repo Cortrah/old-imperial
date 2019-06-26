@@ -11,7 +11,7 @@ class UnitType {
     Integer manaToActivate = 0
     Integer manaToUse = 0
 
-    // each movementRule should have a movementType, a speed, a reactionSpeed, a cargoCost and cargoCapacity
+    // ToDo: each movementRule should have a movementType, a speed, a reactionSpeed, a cargoCost and cargoCapacity
     static hasMany = [movementRules :MovementRule, costs :Cost, buildLocationTypes :BuildLocationType]
 
     QualityRatingType qualityRatingType
