@@ -8,10 +8,32 @@ Cogs of a vast empire, they sifted... they churned... they recorded...
 
 distiling with their pens an elixir that would nurture the dreams of many for decades to come.
 
+# Prerequisites    
+    postgres
+    groovy
+    grails
+
+# CONFIGULAR
+    curl -s get.sdkman.io | bash
+    should be at
+    /Users/cort/.sdkman
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+    sdk install grails
+    grails -version
+    
+    which grails
+    /Users/cort/.sdkman/candidates/grails/current/bin/grails
+    which groovy
+    /usr/local/bin/groovy
+
+    set GRAILS_HOME and PATH in .profile
+
+    export GRAILS_HOME=/path/to/grails
+    export PATH="$PATH:$GRAILS_HOME/bin" 
 
 
 #To Run
-    
+    grails dev run-app    
     http://localhost:8080
     http://localhost:8080/graphql/browser
 
@@ -32,54 +54,13 @@ distiling with their pens an elixir that would nurture the dreams of many for de
       "variables": { "myVariable": "someValue", ... }
     }
     
-# CONFIGULAR
-    curl -s get.sdkman.io | bash
-    should be at
-    /Users/cort/.sdkman
-    source "$HOME/.sdkman/bin/sdkman-init.sh"
-    sdk install grails
-    grails -version
-    
-    which grails
-    /Users/cort/.sdkman/candidates/grails/current/bin/grails
-    which groovy
-    /usr/local/bin/groovy
-
-    set GRAILS_HOME and PATH in .profile
-
-    export GRAILS_HOME=/path/to/grails
-    export PATH="$PATH:$GRAILS_HOME/bin" 
-
 
 # Old Imperial
 
-Overall Todo
+Hosting - Google Cloud Platform, Docker, CircleCi
 
-Hosting - Google Cloud Platoform, Docker, CircleCi
-
-Marketing
-    
-    Kickstarter
-    
-    A book - fun and games with discourse
-    
-    Swag
-    
-    Contests
-    
-    Alliances with established games and creators 
-        
-        Cruenti Dei
-        Mouse Guard
-        Eclipse Phase
-        Pelikoi
 
 # TASKS
-
-Mobile/Tablet/Bigscreen Layouts
-
-    Make it clickable and transition with turn 23 content.
-
 
 Diplomacy and Team Workflow - Discourse
     
@@ -104,52 +85,6 @@ Turn Processing Tool
        
     3. Possibly a custom admin interface with React and Blueprint    
 
-    
-Vue client interface
-    
-    Inline Popup Component for text, processing to automatically create them based on characters, regions and realms
-    
-    Map Component
-    
-    Realm Actions
-    
-    Leader Actions
-    
-    Processing actions with default narrative and custom narrative
-
-
-# Technical Process
-
-    Esperiment with Grails Plugin
-    
-    Get Grails and Graphql working.    
-    
-    Create a vue project (seperate or monolithic?)
-
-    Try Vue Storybook and element ui
-    
-    Add inline popup
-    
-    Add map
-   
-    Add a leader icon to the map
-    
-    Have the leader icon be draggable
-    
-    Have the leader icon have orbit actions
-    
-    Assemble those actions and post them to the server
-    
-    Have the server interface process the actions
-
-# Design Process
-
-    do an interface inventory
-    
-    stub out components for a complete system
-    
-    compose layouts with the components
-    
     
 
 
