@@ -1,10 +1,5 @@
 package org.turnstyles
 
-import org.turnstyles.Realm
-import org.turnstyles.Herald
-import org.turnstyles.Turn
-import org.turnstyles.MajorMap
-
 class Game {
     String name = "GameName"
     String code = "GameCode"
@@ -89,23 +84,23 @@ class Game {
         servletContext.komLoc6 = new Location(name: "Military Academy of Bituveco", code: "Bit", label: "Bituveco", region: servletContext.KomRegion3).save()
         servletContext.komLoc7 = new Location(name: "County of Namdynn", code: "Nam", label: "Namdynn", region: servletContext.KomRegion4).save()
 
-        servletContext.border1 = new RegionBorders(
+        servletContext.border1 = new RegionBorder(
                 name: "Komolek:Korev", code: "Kom:Kor",
                 source:servletContext.KomRegion1, sink:servletContext.KomRegion2, borderType: servletContext.adjBorder).save()
 
-        servletContext.border2 = new RegionBorders(
+        servletContext.border2 = new RegionBorder(
                 name: "Komolek_Korev", code: "Kom_Kor",
                 source:servletContext.KomRegion1, sink:servletContext.KomRegion2, borderType: servletContext.roadBorder).save()
 
-        servletContext.border3 = new RegionBorders(
+        servletContext.border3 = new RegionBorder(
                 name: "Korev:Colledhu", code: "Kor:Col",
                 source:servletContext.KomRegion2, sink:servletContext.KomRegion3, borderType: servletContext.adjBorder).save()
 
-        servletContext.border4 = new RegionBorders(
+        servletContext.border4 = new RegionBorder(
                 name: "Korev_Col", code: "Kor_Col",
                 source:servletContext.KomRegion2, sink:servletContext.KomRegion3, borderType: servletContext.roadBorder).save()
 
-        servletContext.border5 = new RegionBorders(
+        servletContext.border5 = new RegionBorder(
                 name: "Colledhu-M-Namdynn", code: "Col-M-Nam",
                 source:servletContext.KomRegion3, sink:servletContext.KomRegion4, borderType: servletContext.majMtnBorder).save()
 

@@ -10,19 +10,19 @@ class RegionBordersController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond RegionBorders.list(params), model:[regionBordersCount: RegionBorders.count()]
+        respond RegionBorder.list(params), model:[regionBordersCount: RegionBorder.count()]
     }
 
-    def show(RegionBorders regionBorders) {
+    def show(RegionBorder regionBorders) {
         respond regionBorders
     }
 
     def create() {
-        respond new RegionBorders(params)
+        respond new RegionBorder(params)
     }
 
     @Transactional
-    def save(RegionBorders regionBorders) {
+    def save(RegionBorder regionBorders) {
         if (regionBorders == null) {
             transactionStatus.setRollbackOnly()
             notFound()
@@ -46,12 +46,12 @@ class RegionBordersController {
         }
     }
 
-    def edit(RegionBorders regionBorders) {
+    def edit(RegionBorder regionBorders) {
         respond regionBorders
     }
 
     @Transactional
-    def update(RegionBorders regionBorders) {
+    def update(RegionBorder regionBorders) {
         if (regionBorders == null) {
             transactionStatus.setRollbackOnly()
             notFound()
@@ -76,7 +76,7 @@ class RegionBordersController {
     }
 
     @Transactional
-    def delete(RegionBorders regionBorders) {
+    def delete(RegionBorder regionBorders) {
 
         if (regionBorders == null) {
             transactionStatus.setRollbackOnly()

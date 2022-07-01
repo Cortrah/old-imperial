@@ -1,8 +1,4 @@
 package org.turnstyles
-
-import org.turnstyles.QualityRatingType
-import org.turnstyles.QualityRating
-
 // ToDo: this is really a RealmTurn or RealmStatus
 // as anything can change from turn to turn
 // and so we have a new instance each turn
@@ -77,7 +73,7 @@ class Realm {
                       turnActions     : RealmAction, specialQualityRatings: QualityRating,
                       hiddenRealms    : Realm, hiddenMajorMaps: MajorMap, hiddenNarratives: Narrative,
                       hiddenConstructs: Construct, hiddenLocations: Location, hiddenMinorMaps: MinorMap,
-                      hiddenRegions   : Region, hiddenRegionBorders: RegionBorders, hiddenFeatures: Feature,
+                      hiddenRegions   : Region, hiddenRegionBorders: RegionBorder, hiddenFeatures: Feature,
                       hiddenHeralds   : Herald, hiddenItems: Item, hiddenKindred: Kindred, hiddenReligions: Religion,
                       hiddenSpelltype : SpellType, hiddenUnitType: UnitType, hiddenBuildLocationType: BuildLocationType,
                       hiddenLeaders   : Leader, hiddenUnitTypeGroups: UnitTypeGroup,

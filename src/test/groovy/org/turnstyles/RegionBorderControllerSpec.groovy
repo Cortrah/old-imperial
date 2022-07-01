@@ -1,11 +1,11 @@
 package org.turnstyles
 
-import grails.test.mixin.*
+
 import spock.lang.*
 
 @TestFor(RegionBordersController)
-@Mock(RegionBorders)
-class RegionBordersControllerSpec extends Specification {
+@Mock(RegionBorder)
+class RegionBorderControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -38,7 +38,7 @@ class RegionBordersControllerSpec extends Specification {
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
             request.method = 'POST'
-            def regionBorders = new RegionBorders()
+            def regionBorders = new RegionBorder()
             regionBorders.validate()
             controller.save(regionBorders)
 
@@ -49,14 +49,14 @@ class RegionBordersControllerSpec extends Specification {
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            regionBorders = new RegionBorders(params)
+            regionBorders = new RegionBorder(params)
 
             controller.save(regionBorders)
 
         then:"A redirect is issued to the show action"
             response.redirectedUrl == '/regionBorders/show/1'
             controller.flash.message != null
-            RegionBorders.count() == 1
+            RegionBorder.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -68,7 +68,7 @@ class RegionBordersControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def regionBorders = new RegionBorders(params)
+            def regionBorders = new RegionBorder(params)
             controller.show(regionBorders)
 
         then:"A model is populated containing the domain instance"
@@ -84,7 +84,7 @@ class RegionBordersControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def regionBorders = new RegionBorders(params)
+            def regionBorders = new RegionBorder(params)
             controller.edit(regionBorders)
 
         then:"A model is populated containing the domain instance"
@@ -103,7 +103,7 @@ class RegionBordersControllerSpec extends Specification {
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def regionBorders = new RegionBorders()
+            def regionBorders = new RegionBorder()
             regionBorders.validate()
             controller.update(regionBorders)
 
@@ -114,7 +114,7 @@ class RegionBordersControllerSpec extends Specification {
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            regionBorders = new RegionBorders(params).save(flush: true)
+            regionBorders = new RegionBorder(params).save(flush: true)
             controller.update(regionBorders)
 
         then:"A redirect is issued to the show action"
@@ -136,16 +136,16 @@ class RegionBordersControllerSpec extends Specification {
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def regionBorders = new RegionBorders(params).save(flush: true)
+            def regionBorders = new RegionBorder(params).save(flush: true)
 
         then:"It exists"
-            RegionBorders.count() == 1
+            RegionBorder.count() == 1
 
         when:"The domain instance is passed to the delete action"
             controller.delete(regionBorders)
 
         then:"The instance is deleted"
-            RegionBorders.count() == 0
+            RegionBorder.count() == 0
             response.redirectedUrl == '/regionBorders/index'
             flash.message != null
     }
