@@ -9,6 +9,7 @@ class Region {
     String code = "Code"
     String label = "Label"
     String description = ""
+    String tooltip = ""
     String notes = ""
     String toString() {"$name"}
 
@@ -46,7 +47,8 @@ class Region {
     Integer h = 100
     Integer cX = 50
     Integer cY = 50
-    String path = "m0,0 L100,0 L100,100 L0,100 z"
+    String pathId = ""
+    String pathData = "m0,0 L100,0 L100,100 L0,100 z"
 
     static belongsTo = [majorMap: MajorMap]
     static hasMany = [locations: Location, borders: RegionBorders]
@@ -56,6 +58,7 @@ class Region {
         name blank: false
         code blank: false
         label blank: false
+        tooltip blank: true
         description blank: true
         notes blank: true
 
@@ -85,7 +88,8 @@ class Region {
         h()
         cX()
         cY()
-        path()
+        pathId()
+        pathData()
     }
 }
 

@@ -9,6 +9,7 @@ class Game {
     String name = "GameName"
     String code = "GameCode"
     String label = "GameLabel"
+    String description = "A Mysterious Game"
     String notes = "Notes"
     String status = "Staging"
 
@@ -22,7 +23,8 @@ class Game {
         name blank: false
         code blank: false
         label blank: false
-        status inList: ["Staging", "Ploting", "Processing", "Concluded"]
+        description blank: false
+        status inList: ["Staging", "Plotting", "Processing", "Concluded"]
 
         currentTurn nullable: true
 
@@ -30,7 +32,7 @@ class Game {
     }
 
     def seedContext (servletContext) {
-        servletContext.FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice").save()
+        servletContext.FireAndIce = new Game(name: "Of Fire and Ice", code: "Fie", label: "Fire Ice", description: "The prototypical game of Cruenti Dei").save()
 
         // heralds belong to realms, realms belong to turns and turns belong to games so we initialize them here
         servletContext.Turn25 = new Turn(name: "1540-1545", number: 25, startingYear: 1571, endingYear: 1575,
@@ -43,8 +45,13 @@ class Game {
 
         servletContext.EThace = new Realm(name: "Electoral County Palatine of Thace", code: "ETh", label: "E Thace",
                 game: servletContext.FireAndIce, turn: servletContext.Turn25).save()
-        servletContext.Kolgrim = new Herald(name: "Kolgrim", label: "Gman",
+        servletContext.Kolgrim = new Herald(name: "Kolgrim", code: "G", label: "Gman",
                 realm: servletContext.EThace).save()
+
+        servletContext.Tokatl = new Realm(name: "Principality of Tokatl", code: "tok", label: "Tokatl",
+                game: servletContext.FireAndIce, turn: servletContext.Turn25).save()
+        servletContext.Skipperway = new Herald(name: "Skipperway", label: "Shelly", img: "chitixi.jpg",
+                realm: servletContext.Tokatl).save()
 
         servletContext.sahulMap = new MajorMap(name: "FireAndIce: Imperial Sahul", code: "Sah", label: "Sahul", turn: servletContext.Turn25,
                 description: "The continent of Sahul is under the dubious leadership of an imperial structure called the second empire.",

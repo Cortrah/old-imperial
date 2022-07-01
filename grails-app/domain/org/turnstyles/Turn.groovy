@@ -2,12 +2,15 @@ package org.turnstyles
 
 class Turn {
     String name = "0-5"
+    String code = "1"
+    String label = "1"
     Integer number = 1
+    String description = "The first turn which encompasses a five year span in game time"
     Integer startingYear = 0
     Integer endingYear = 5
 
     String status = "Staging"
-    String chronicle = "Sahul.1440.pdf"
+    String chronicle = "Sahul-1440.pdf"
     Date dueDate = new Date()
     String notes = "Notes"
 
@@ -23,11 +26,14 @@ class Turn {
     static graphql = true
     static constraints = {
         name blank: false
+        code blank: false
+        label blank: false
         number blank: false
+        description blank: true
         startingYear nullable: false
         endingYear nullable: false
 
-        status inList: ["Staging", "Ploting", "Processing", "Editing", "Concluded"]
+        status inList: ["Staging", "Plotting", "Processing", "Editing", "Concluded"]
         notes blank: true
 
         dueDate()

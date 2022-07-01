@@ -17,5 +17,23 @@ spelltype, unittype BuildLocationType
 
 everything else remains secret by default,
 but what about allied leaders, units and unitytpegroups?
-how do they exchange and coordinate if they cant see each other? For that we probably need to add those. But leave those for round2
+how do they exchange and coordinate if they cant see each other? For that we probably need to add those.
+But leave those for round2
 
+
+resource (movement, mana, gp, ap, nfp, sfp, pwb, tv,
+road(x2 land mv), resistance,
+volcano, griphon_arie, elephant_farm, horse_farm, is_capital,
+
+Q: The question is where these attributes belong?
+for things like volcano, is_capital, home_region, religion, kindred, terrain_type, realm_type
+they could be considered a resource where you have to have 1 as a cost
+or they could be managed more particularly
+
+cavQr, infQr, sgeQr, navQr, airQr, nsrQr, irQr, blQr, rsQr, celQr
+
+cost
+
+effect
+
+extra_resources can do a set of named pairs of resource, ammount

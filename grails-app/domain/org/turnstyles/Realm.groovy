@@ -63,7 +63,7 @@ class Realm {
     QualityRating rsQr
     QualityRating celQr
 
-    String realmNotes = "Notes"
+    String realmNotes = "Realm Notes"
 
     // ------------
     // Dei
@@ -73,15 +73,15 @@ class Realm {
     String deiNotes = "Dei Notes"
 
     static belongsTo = [turn: Turn]
-    static hasMany = [regions: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement,
-                      turnActions: RealmAction, specialQualityRatings: QualityRating,
-                      hiddenRealms: Realm, hiddenMajorMaps: MajorMap, hiddenNarratives: Narrative,
+    static hasMany = [regionInfluences: Region, tradeAgreements: TradeAgreement, militaryAgreements: MilitaryAgreement,
+                      turnActions     : RealmAction, specialQualityRatings: QualityRating,
+                      hiddenRealms    : Realm, hiddenMajorMaps: MajorMap, hiddenNarratives: Narrative,
                       hiddenConstructs: Construct, hiddenLocations: Location, hiddenMinorMaps: MinorMap,
-                      hiddenRegions: Region, hiddenRegionBorders: RegionBorders, hiddenFeatures: Feature,
-                      hiddenHeralds: Herald, hiddenItems: Item, hiddenKindred: Kindred, hiddenReligions: Religion,
-                      hiddenSpelltype: SpellType, hiddenUnitType: UnitType, hiddenBuildLocationType: BuildLocationType,
-                      hiddenLeaders: Leader, hiddenUnitTypeGroups: UnitTypeGroup,
-                      leaderActions: LeaderAction, realmActions: RealmAction, narratives: Narrative]
+                      hiddenRegions   : Region, hiddenRegionBorders: RegionBorders, hiddenFeatures: Feature,
+                      hiddenHeralds   : Herald, hiddenItems: Item, hiddenKindred: Kindred, hiddenReligions: Religion,
+                      hiddenSpelltype : SpellType, hiddenUnitType: UnitType, hiddenBuildLocationType: BuildLocationType,
+                      hiddenLeaders   : Leader, hiddenUnitTypeGroups: UnitTypeGroup,
+                      leaders         : Leader, realmActions: RealmAction, narratives: Narrative]
 
     static graphql = true
     static constraints = {
@@ -89,6 +89,8 @@ class Realm {
         code blank: false
         label blank: false
         description nullable: true
+        realmNotes blank: true
+        deiNotes blank: true
 
         herald nullable: true
 
