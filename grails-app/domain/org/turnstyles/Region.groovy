@@ -60,7 +60,7 @@ class Region {
         label blank: false
         tooltip blank: true
         description blank: true
-        notes blank: true
+        notes blank: true, maxSize: 10000
 
         kindred nullable : true
         terrain nullable: true
@@ -89,7 +89,7 @@ class Region {
         cX()
         cY()
         pathId()
-        pathData()
+        pathData(maxSize: 10000)
     }
 }
 
