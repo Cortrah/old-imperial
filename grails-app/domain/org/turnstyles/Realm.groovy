@@ -48,6 +48,9 @@ class Realm {
     Double sfp = 0.0
     Double armySupport = 0.0
 
+    int mapLabelX = 0
+    int mapLabelY = 0
+
     QualityRating cavQr
     QualityRating infQr
     QualityRating sgeQr
@@ -110,6 +113,8 @@ class Realm {
         startingTv()
         endingIsi()
         endingTv()
+        mapLabelX()
+        mapLabelY()
     }
 
     def seedContext (servletContext) {
