@@ -4,6 +4,7 @@ class UnitTypeGroup {
 
     String name = "Name"
     String code = "Code"
+    String label = "Label"
     String description = ""
 
     UnitType unitType
@@ -23,6 +24,7 @@ class UnitTypeGroup {
     static constraints = {
         name blank: false
         code blank: false
+        label blank: false
         description nullable: true
 
         unitType()

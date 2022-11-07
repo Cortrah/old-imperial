@@ -47,8 +47,8 @@ class Region {
     Integer h = 100
     Integer cX = 50
     Integer cY = 50
-    Integer labelDX = 0
-    Integer labelDY = 0
+    Integer mapLabelX = 0
+    Integer mapLabelY = 0
     String pathId = ""
     String pathData = "m0,0 L100,0 L100,100 L0,100 z"
 
@@ -90,8 +90,8 @@ class Region {
         h()
         cX()
         cY()
-        labelDX()
-        labelDY()
+        mapLabelX()
+        mapLabelY()
         pathId()
         pathData(maxSize: 10000)
     }

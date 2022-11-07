@@ -3,6 +3,7 @@ package org.turnstyles
 class AllegianceType {
     String name = "Unknown"
     String code = "?"
+    String label = "Label"
     String description = "A Mystery"
     // Movement Rules
 
@@ -12,6 +13,7 @@ class AllegianceType {
     static constraints = {
         name blank: false
         code blank: false
+        label blank: false
         description blank: true
     }
 

@@ -3,6 +3,7 @@ package org.turnstyles
 class TerrainType {
     String name = "Unknown"
     String code = "?"
+    String label = "Label"
     String description = "A Mystery"
 
     Integer landCost = null
@@ -15,6 +16,7 @@ class TerrainType {
     static constraints = {
         name blank: false
         code blank: false
+        label blank: false
         description nullable: true
 
         landCost nullable: true

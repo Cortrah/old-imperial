@@ -1,7 +1,6 @@
 package org.turnstyles
 
 class MajorMap {
-
     String name = "Unknown"
     String code = "?"
     String label = "Unknown"

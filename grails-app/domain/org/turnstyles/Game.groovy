@@ -35,7 +35,7 @@ class Game {
 
         // heralds belong to realms, realms belong to turns and turns belong to games so we initialize them here
         servletContext.Turn25 = new Turn(
-                name: "1540-1545",
+                name: "1571-1575",
                 number: 25,
                 startingYear: 1571,
                 endingYear: 1575,
@@ -94,6 +94,13 @@ class Game {
         servletContext.tokLoc2 = new Location(name: "County of Chakah", code: "Cha", label: "Chakah", region: servletContext.TokRegion2).save()
         servletContext.tokLoc3 = new Location(name: "Port of", code: "pt", label: "port", region: servletContext.TokRegion1).save()
         servletContext.tokLoc4 = new Location(name: "City of", code: "ct", label: "city", region: servletContext.TokRegion2).save()
+
+        servletContext.tokLdr1 = new Leader(name: "Skiperway", code: "H1", label: "Skiperway", realm:servletContext.Tokatl,
+                atRegion: servletContext.TokRegion1, atLocation: servletContext.tokLoc1, avatar: "chitixi.jpg").save()
+        servletContext.tokLdr2 = new Leader(name: "Cortrah", code: "L2", label: "Cortrah", realm:servletContext.Tokatl,
+                atRegion: servletContext.TokRegion1, atLocation: servletContext.tokLoc3, avatar: "aanavas.png").save()
+        servletContext.tokLdr3 = new Leader(name: "Mandala", code: "L3", label: "Mandala", realm:servletContext.Tokatl,
+                atRegion: servletContext.TokRegion2, atLocation: servletContext.tokLoc2, avatar: "mandala.gif").save()
 
         servletContext.SeaRegion1 = new Region(
                 name: "Cape Sutrom",
@@ -176,6 +183,34 @@ class Game {
                 name: "Colledhu-M-Namdynn", code: "Col-M-Nam",
                 source:servletContext.KomRegion3, sink:servletContext.KomRegion4, borderType: servletContext.majMtnBorder).save()
 
+        servletContext.sahulTurn25Narrative = new Narrative(name: "Sahul Saga - Turn 25",
+                code:"T25N", content:"Oh the things that may have occured", type: "MajorMapNarrative",
+                label: "Sahul Saga:Turn 25", description: "Perilous Moonfall",
+                turn: servletContext.Turn25).save()
+
         servletContext.FireAndIce.currentTurn = servletContext.Turn25
+
+
+
+//        regionPaths = new XmlSlurper().parse("./grails-app/assets/data/Sahul_Snow_paths.svg")
+//        println(regionPaths.toString())
+//
+//        regionPaths.each {
+//            println(it.id)
+//            println(it.path)
+//        }
+//            servletContext.TokRegion1 = new Region(
+//                    name: it.id,
+//                    code: it.id,
+//                    label: it.id,
+//                    gp: 4, ap: 3, nfp: 3, mana: 1, pwb: 32, tv: 1,
+//                    turn: servletContext.Turn25,
+//                    realm: servletContext.Tokatl, allegiance: servletContext.Friendly,  bordersVolcano: false,
+//                    hasRoad: false, isSecret: false, isInimical: false, resistance: 2,
+//                    kindred: servletContext.WenemetKin,
+//                    pathId: it.id,
+//                    pathData: it.path,
+//                    x: 0, y: 0, w: 100, h: 100, cX: 50, cY: 50,
+//                    terrain: servletContext.Clear, majorMap: servletContext.sahulMap).save()
     }
 }

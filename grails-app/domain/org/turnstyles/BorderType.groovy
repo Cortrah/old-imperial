@@ -3,6 +3,7 @@ package org.turnstyles
 class BorderType {
     String name = "Unknown"
     String code = "?"
+    String label = "Label"
     String description = "A Mystery"
 
     // ToDo: Abstract costs?
@@ -21,6 +22,7 @@ class BorderType {
     static constraints = {
         name blank: false
         code blank: false
+        label blank: false
         description nullable: true
 
         landCost nullable: true

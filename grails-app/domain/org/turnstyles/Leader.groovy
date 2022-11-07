@@ -23,6 +23,7 @@ class Leader {
     Integer carryingGp = 0
 
     String icon = "leader.svg"
+    String avatar = "cortrah.png"
     Integer x = 0
     Integer y = 0
 
@@ -40,7 +41,11 @@ class Leader {
     Kindred kindred
     TrainingType training
 
+    // note that that realm may be unknown or free wheelers or something like that, which is controlled by Dei
+    // in the majority case, we want this association
+    static belongsTo = [realm: Realm]
     static hasMany = [items :Item, unitTypeGroups :UnitTypeGroup]
+
 
     String toString() {"$name"}
 
@@ -59,6 +64,7 @@ class Leader {
         atLocation nullable: true
 
         icon nullable: true
+        avatar nullable: true
         x nullable: true
         y nullable: true
 
@@ -70,10 +76,10 @@ class Leader {
         age nullable: false
         sex nullable: false
 
-        agentType nullable: false
+        agentType nullable: true
         realm nullable: true
         homeRegion nullable: true
-        kindred nullable: false
+        kindred nullable: true
         training nullable: true
     }
     def seedContext (servletContext) {
