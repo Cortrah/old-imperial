@@ -13,24 +13,29 @@ distiling with their pens an elixir that would nurture the dreams of many for de
     groovy
     grails
 
+# versions
+    groovy 2.4.7
+    gradle 3.5
+    java 1.8
+    grails 3.3.9
+    gormVersion-6.1.5.RELEASE
+    grailsWrapperVerion=1.0.0
+    gradleWrapperVerion=3.5
+    gorm-graphql 1.9.9
+
 # CONFIGULAR
     curl -s get.sdkman.io | bash
-    should be at
-    /Users/cort/.sdkman
     source "$HOME/.sdkman/bin/sdkman-init.sh"
-    sdk install grails
-    grails -version
-    
-    which grails
-    /Users/cort/.sdkman/candidates/grails/current/bin/grails
-    which groovy
-    /usr/local/bin/groovy
+    sdk install grails 3.3.8
+    sdk install gradle 3.5
+    sdk install groovy 2.4.7
 
     set GRAILS_HOME and PATH in .profile
 
     export GRAILS_HOME=/path/to/grails
     export PATH="$PATH:$GRAILS_HOME/bin" 
 
+    details at https://sdkman.io/usage
 
 #To Run
 
